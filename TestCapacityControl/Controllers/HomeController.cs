@@ -17,14 +17,14 @@ namespace TestCapacityControl.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Test Capacity Control by Product.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Test Capacity Control Web Page.";
 
             return View();
         }
