@@ -101,7 +101,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DepartamentExists(departments.Id))
+                    if (!DepartmentsExists(departments.Id))
                     {
                         return NotFound();
                     }
@@ -138,13 +138,13 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var departament = await _context.Departments.FindAsync(id);
-            _context.Departments.Remove(departament);
+            var departments = await _context.Departments.FindAsync(id);
+            _context.Departments.Remove(departments);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DepartamentExists(int id)
+        private bool DepartmentsExists(int id)
         {
             return _context.Departments.Any(e => e.Id == id);
         }
