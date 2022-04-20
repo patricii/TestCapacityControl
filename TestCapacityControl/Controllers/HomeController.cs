@@ -28,7 +28,15 @@ namespace TestCapacityControl.Controllers
 
             return View();
         }
+        public IActionResult Departments()
+        {
+            return View();
+        }
 
+        public IActionResult TestRatesCelular()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
