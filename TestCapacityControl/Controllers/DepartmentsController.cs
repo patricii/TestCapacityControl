@@ -24,7 +24,7 @@ namespace TestCapacityControl.Controllers
             return View(await _context.Departments.ToListAsync());
         }
 
-        // GET: Departaments/Details/5
+        // GET: Departments/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -42,7 +42,7 @@ namespace TestCapacityControl.Controllers
             return View(departments);
         }
 
-        // GET: Departaments/Create
+        // GET: Departments/Create
         public IActionResult Create()
         {
             return View();
@@ -64,7 +64,7 @@ namespace TestCapacityControl.Controllers
             return View(departments);
         }
 
-        // GET: Departaments/Edit/5
+        // GET: Departments/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,7 +80,7 @@ namespace TestCapacityControl.Controllers
             return View(departments);
         }
 
-        // POST: Departaments/Edit/5
+        // POST: Departments/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -133,7 +133,7 @@ namespace TestCapacityControl.Controllers
             return View(departments);
         }
 
-        // POST: Departaments/Delete/5
+        // POST: Departments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
