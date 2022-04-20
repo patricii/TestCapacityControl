@@ -18,7 +18,7 @@ namespace TestCapacityControl.Migrations
                 .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("TestCapacityControl.Models.Department", b =>
+            modelBuilder.Entity("TestCapacityControl.Models.Departments", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -31,7 +31,7 @@ namespace TestCapacityControl.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departament");
+                    b.ToTable("Departments");
                 });
 #pragma warning restore 612, 618
         }

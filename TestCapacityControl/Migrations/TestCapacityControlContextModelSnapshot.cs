@@ -29,7 +29,7 @@ namespace TestCapacityControl.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departament");
+                    b.ToTable("Departments");
                 });
 #pragma warning restore 612, 618
         }

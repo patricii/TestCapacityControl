@@ -18,10 +18,10 @@ namespace TestCapacityControl.Controllers
             _context = context;
         }
 
-        // GET: Departaments
+        // GET: Departments
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Departament.ToListAsync());
+            return View(await _context.Departments.ToListAsync());
         }
 
         // GET: Departaments/Details/5
@@ -32,14 +32,14 @@ namespace TestCapacityControl.Controllers
                 return NotFound();
             }
 
-            var departament = await _context.Departament
+            var departments = await _context.Departments
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (departament == null)
+            if (departments == null)
             {
                 return NotFound();
             }
 
-            return View(departament);
+            return View(departments);
         }
 
         // GET: Departaments/Create
@@ -53,15 +53,15 @@ namespace TestCapacityControl.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,JobTitle,Email")] Department departament)
+        public async Task<IActionResult> Create([Bind("Id,Name,JobTitle,Email")] Departments departments)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(departament);
+                _context.Add(departments);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(departament);
+            return View(departments);
         }
 
         // GET: Departaments/Edit/5
@@ -72,12 +72,12 @@ namespace TestCapacityControl.Controllers
                 return NotFound();
             }
 
-            var departament = await _context.Departament.FindAsync(id);
-            if (departament == null)
+            var departments = await _context.Departments.FindAsync(id);
+            if (departments == null)
             {
                 return NotFound();
             }
-            return View(departament);
+            return View(departments);
         }
 
         // POST: Departaments/Edit/5
@@ -85,9 +85,9 @@ namespace TestCapacityControl.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,JobTitle,Email")] Department departament)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,JobTitle,Email")] Departments departments)
         {
-            if (id != departament.Id)
+            if (id != departments.Id)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace TestCapacityControl.Controllers
             {
                 try
                 {
-                    _context.Update(departament);
+                    _context.Update(departments);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DepartamentExists(departament.Id))
+                    if (!DepartamentExists(departments.Id))
                     {
                         return NotFound();
                     }
@@ -112,7 +112,7 @@ namespace TestCapacityControl.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(departament);
+            return View(departments);
         }
 
         // GET: Departaments/Delete/5
@@ -123,14 +123,14 @@ namespace TestCapacityControl.Controllers
                 return NotFound();
             }
 
-            var departament = await _context.Departament
+            var departments = await _context.Departments
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (departament == null)
+            if (departments == null)
             {
                 return NotFound();
             }
 
-            return View(departament);
+            return View(departments);
         }
 
         // POST: Departaments/Delete/5
@@ -138,15 +138,15 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var departament = await _context.Departament.FindAsync(id);
-            _context.Departament.Remove(departament);
+            var departament = await _context.Departments.FindAsync(id);
+            _context.Departments.Remove(departament);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool DepartamentExists(int id)
         {
-            return _context.Departament.Any(e => e.Id == id);
+            return _context.Departments.Any(e => e.Id == id);
         }
     }
 }

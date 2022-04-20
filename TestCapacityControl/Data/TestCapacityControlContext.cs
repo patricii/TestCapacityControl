@@ -13,6 +13,6 @@ namespace TestCapacityControl.Models
         {
         }
 
-        public DbSet<TestCapacityControl.Models.Department> Departament { get; set; }
+        public DbSet<TestCapacityControl.Models.Departments> Departments { get; set; }
     }
 }
