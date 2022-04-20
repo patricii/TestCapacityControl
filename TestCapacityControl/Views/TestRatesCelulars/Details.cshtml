@@ -1,0 +1,204 @@
+﻿@model TestCapacityControl.Models.TestRatesCelular
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TestRatesCelular</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.product)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.product)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CFCUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CFCUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CFCNt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CFCNt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatsJotUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatsJotUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatsM2Uph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatsM2Uph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JOTSlimUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JOTSlimUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JOTSlimPsps)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JOTSlimPsps)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JotSlimSpr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JotSlimSpr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JOTSlimTotalUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JOTSlimTotalUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JOTSlimNt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JOTSlimNt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.L2ArSlimUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.L2ArSlimUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.L2ArSlimFxt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.L2ArSlimFxt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.L2ArSlimSpr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.L2ArSlimSpr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.L2ArSlimTotalUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.L2ArSlimTotalUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.L2ArSlimNt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.L2ArSlimNt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PATSSlimUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PATSSlimUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMVALSlimUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMVALSlimUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMVALSlimFxt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMVALSlimFxt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMVALSlimSpr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMVALSlimSpr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMVALSlimTotalUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMVALSlimTotalUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMVALSlimNt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMVALSlimNt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMCALSlimUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMCALSlimUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMCALSlimFxt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMCALSlimFxt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMCALSlimSpr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMCALSlimSpr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMCALSlimTotalUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMCALSlimTotalUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMCALSlimNt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CAMCALSlimNt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FODSlimUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FODSlimUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FODSlimFxt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FODSlimFxt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FODSlimSpr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FODSlimSpr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FODSlimTotalUph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FODSlimTotalUph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FODSlimNt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FODSlimNt)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
