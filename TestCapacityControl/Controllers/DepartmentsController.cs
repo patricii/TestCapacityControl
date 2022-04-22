@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -21,7 +22,12 @@ namespace TestCapacityControl.Controllers
         // GET: Departments
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Departments.ToListAsync());
+            var TestNames = from s in _context.Departments //Returning Name by OrderBy
+                           select s;
+
+            TestNames = TestNames.OrderBy(s => s.Name);
+            
+            return View(await TestNames.AsNoTracking().ToListAsync());
         }
 
         // GET: Departments/Details/5
