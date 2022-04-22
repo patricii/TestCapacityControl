@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TestCapacityControl.Models.TestProcess>
+
+@{
+    ViewData["Title"] = "Test Process BE";
+}
+
+<h2>Test Process BE</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Technology)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.M2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JOT_Slim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JOT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WUHAN_L2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WUHAN_JOT_Slim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WUHAN_JOT)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Technology)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.L2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.M2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JOT_Slim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JOT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WUHAN_L2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WUHAN_JOT_Slim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WUHAN_JOT)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -17,5 +17,7 @@ namespace TestCapacityControl.Models
         public DbSet<TestCapacityControl.Models.Departments> Departments { get; set; }
 
         public DbSet<TestCapacityControl.Models.TestRatesCelular> TestRatesCelular { get; set; }
+
+        public DbSet<TestCapacityControl.Models.TestProcess> TestProcess { get; set; }
     }
 }

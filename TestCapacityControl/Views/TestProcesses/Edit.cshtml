@@ -1,0 +1,69 @@
+﻿@model TestCapacityControl.Models.TestProcess
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>TestProcess</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Technology" class="control-label"></label>
+                <input asp-for="Technology" class="form-control" />
+                <span asp-validation-for="Technology" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="L2" class="control-label"></label>
+                <input asp-for="L2" class="form-control" />
+                <span asp-validation-for="L2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="M2" class="control-label"></label>
+                <input asp-for="M2" class="form-control" />
+                <span asp-validation-for="M2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JOT_Slim" class="control-label"></label>
+                <input asp-for="JOT_Slim" class="form-control" />
+                <span asp-validation-for="JOT_Slim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JOT" class="control-label"></label>
+                <input asp-for="JOT" class="form-control" />
+                <span asp-validation-for="JOT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WUHAN_L2" class="control-label"></label>
+                <input asp-for="WUHAN_L2" class="form-control" />
+                <span asp-validation-for="WUHAN_L2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WUHAN_JOT_Slim" class="control-label"></label>
+                <input asp-for="WUHAN_JOT_Slim" class="form-control" />
+                <span asp-validation-for="WUHAN_JOT_Slim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WUHAN_JOT" class="control-label"></label>
+                <input asp-for="WUHAN_JOT" class="form-control" />
+                <span asp-validation-for="WUHAN_JOT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
