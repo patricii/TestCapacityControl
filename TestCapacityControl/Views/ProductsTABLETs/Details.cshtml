@@ -1,0 +1,56 @@
+﻿@model TestCapacityControl.Models.ProductsTABLET
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Resume Details</h2>
+
+<div>
+    <h4>Product: @Html.DisplayFor(model => model.ProductName)</h4>
+    <hr />
+    <dl class="dl-horizontal"></dl>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <h3>ME</h3>
+            </th>
+            <th>
+                <h3>BE</h3>
+            </th>
+            <th>
+                <h3>CFC</h3>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <h5>IFLASH:<b> %</b></h5>
+                <h5>WIFI:<b> %</b></h5>
+                <h5>RFCAL:<b> %</b></h5>
+                <h5>NSFT:<b> %</b></h5>
+            </td>
+            <td>
+                <h5>RADCURR:<b> %</b></h5>
+                <h5>VISION TOF:<b> %</b></h5>
+                <h5>ANT:<b> %</b></h5>
+                <h5>MMI 1:<b> %</b></h5>
+                <h5>MMI 2:<b> %</b></h5>
+                <h5>AUDIO:<b> %</b></h5>
+            </td>
+            <td>
+                <h5>WRITE NUMBER:<b> %</b></h5>
+                <h5>CFC UPGRADE:<b> %</b></h5>
+                <h5>MMI 3:<b> %</b></h5>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<div>
+    <!--<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |-->
+    <a asp-action="Index">Back to List</a>
+</div>
