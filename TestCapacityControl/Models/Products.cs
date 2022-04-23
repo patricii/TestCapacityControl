@@ -9,5 +9,7 @@ namespace TestCapacityControl.Models
     {
         public int Id { get; set; }
         public string ProductName { get; set; }
+        public string Model { get; set; }
+        public string Status { get; set; }
     }
 }

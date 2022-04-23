@@ -4,21 +4,64 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>Resume Details</h2>
 
 <div>
-    <h4>Products</h4>
+    <h4>Product: @Html.DisplayFor(model => model.ProductName)</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ProductName)
-        </dd>
-    </dl>
+    <dl class="dl-horizontal"></dl>
 </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <h3>ME</h3>
+            </th>
+            <th>
+                <h3>BE</h3>
+            </th>
+            <th>
+                <h3>CFC</h3>
+            </th>
+            <th>
+                <h3>PATS</h3>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <h5>IFLASH:</h5>
+                <h5>BRDTEST:</h5>
+                <h5>BOARDTST:</h5>
+                <h5>5GFR1BDTST:</h5>
+            </td>
+            <td>
+                <h5>DEPTHCAL:</h5>
+                <h5>DEPTHVAL:</h5>
+                <h5>CAMERACAL:</h5>
+                <h5>CAMERAVAL:</h5>
+                <h5>JOT:</h5>
+                <h5>L2 VISION:</h5>
+                <h5>L2 AR:</h5>
+                <h5>M2 CAMERA:</h5>
+                <h5>M2 AR:</h5>
+                <h5>JOT SLIM:</h5>
+                <h5>L2 AR SLIM:</h5>
+            </td>
+            <td>
+                <h5>CFC:</h5>
+            </td>
+            <td>
+                <h5>PATS JOT:</h5>
+                <h5>PATS M2:</h5>
+                <h5>PATS SLIM:</h5>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <!--<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |-->
     <a asp-action="Index">Back to List</a>
 </div>

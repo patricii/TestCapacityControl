@@ -21,7 +21,13 @@ namespace TestCapacityControl.Controllers
         // GET: Products
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Products.ToListAsync());
+            var ProductsNames = from s in _context.Products //Returning Name by OrderBy
+                                select s;
+
+            ProductsNames = ProductsNames.OrderBy(s => s.ProductName);
+
+            return View(await ProductsNames.AsNoTracking().ToListAsync());
+            //return View(await _context.Products.ToListAsync());
         }
 
         // GET: Products/Details/5
@@ -53,7 +59,7 @@ namespace TestCapacityControl.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ProductName")] Products products)
+        public async Task<IActionResult> Create([Bind("Id,ProductName,Model,Status")] Products products)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +91,7 @@ namespace TestCapacityControl.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ProductName")] Products products)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ProductName,Model,Status")] Products products)
         {
             if (id != products.Id)
             {
