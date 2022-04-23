@@ -11,5 +11,7 @@ namespace TestCapacityControl.Models
         public string ProductName { get; set; }
         public string Model { get; set; }
         public string Status { get; set; }
+
+        public double Yield = 98.5;
     }
 }
