@@ -2,6 +2,11 @@
 
 @{
     ViewData["Title"] = "Details";
+    if (Model.ProductName == "ARUBA")
+    {
+        Model.YieldInline = 98.03;
+
+    }
 }
 
 <h2>Resume Details</h2>
@@ -31,31 +36,31 @@
     <tbody>
         <tr>
             <td>
-                <h5>IFLASH:<b> @Html.DisplayFor(model => model.Yield) %</b></h5>
-                <h5>BRDTEST:<b> %</b></h5>
-                <h5>BOARDTST:<b> %</b></h5>
-                <h5>5GFR1BDTST:<b> %</b></h5>
+                <h5>IFLASH:<b> @Html.DisplayFor(model => model.YieldInline) %</b></h5>
+                <h5>BRDTEST:<b> @Html.DisplayFor(model => model.YieldBrdTest) %</b></h5>
+                <h5>BOARDTST:<b> @Html.DisplayFor(model => model.YieldBoardTst) %</b></h5>
+                <h5>5GFR1BDTST:<b> @Html.DisplayFor(model => model.Yield5GFR) %</b></h5>
             </td>
             <td>
-                <h5>DEPTHCAL:<b> %</b></h5>
-                <h5>DEPTHVAL:<b> %</b></h5>
-                <h5>CAMERACAL:<b> %</b></h5>
-                <h5>CAMERAVAL:<b> %</b></h5>
-                <h5>JOT:<b> %</b></h5>
-                <h5>L2 VISION:<b> %</b></h5>
-                <h5>L2 AR:<b> %</b></h5>
-                <h5>M2 CAMERA:<b> %</b></h5>
-                <h5>M2 AR:<b> %</b></h5>
-                <h5>JOT SLIM:<b> %</b></h5>
-                <h5>L2 AR SLIM:<b> %</b></h5>
+                <h5>DEPTHCAL:<b> @Html.DisplayFor(model => model.YieldDCAL) %</b></h5>
+                <h5>DEPTHVAL:<b> @Html.DisplayFor(model => model.YieldDVAL) %</b></h5>
+                <h5>CAMERACAL:<b> @Html.DisplayFor(model => model.YieldCamCAL) %</b></h5>
+                <h5>CAMERAVAL:<b> @Html.DisplayFor(model => model.YieldCamVAL) %</b></h5>
+                <h5>JOT:<b> @Html.DisplayFor(model => model.YieldJOT) %</b></h5>
+                <h5>L2 VISION:<b> @Html.DisplayFor(model => model.YieldL2Vision) %</b></h5>
+                <h5>L2 AR:<b> @Html.DisplayFor(model => model.YieldM2AR) %</b></h5>
+                <h5>M2 CAMERA:<b> @Html.DisplayFor(model => model.YieldM2Cam) %</b></h5>
+                <h5>M2 AR:<b> @Html.DisplayFor(model => model.YieldM2AR) %</b></h5>
+                <h5>JOT SLIM:<b> @Html.DisplayFor(model => model.YieldJotSlim) %</b></h5>
+                <h5>L2 AR SLIM:<b> @Html.DisplayFor(model => model.YieldARSlim) %</b></h5>
             </td>
             <td>
-                <h5>CFC:<b> %</b></h5>
+                <h5>CFC:<b> @Html.DisplayFor(model => model.YieldCFC) %</b></h5>
             </td>
             <td>
-                <h5>PATS JOT:<b> %</b></h5>
-                <h5>PATS M2:<b> %</b></h5>
-                <h5>PATS SLIM:<b> %</b></h5>
+                <h5>PATS JOT:<b> @Html.DisplayFor(model => model.YieldPatsJot) %</b></h5>
+                <h5>PATS M2:<b> @Html.DisplayFor(model => model.YieldPatsM2) %</b></h5>
+                <h5>PATS SLIM:<b> @Html.DisplayFor(model => model.YieldPatsSlim) %</b></h5>
             </td>
         </tr>
 
