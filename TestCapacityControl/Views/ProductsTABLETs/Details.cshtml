@@ -28,23 +28,23 @@
     <tbody>
         <tr>
             <td>
-                <h5>IFLASH:<b> %</b></h5>
-                <h5>WIFI:<b> %</b></h5>
-                <h5>RFCAL:<b> %</b></h5>
-                <h5>NSFT:<b> %</b></h5>
+                <h5>IFLASH:<b> @Html.DisplayFor(model => model.YieldInline) %</b></h5>
+                <h5>WIFI:<b> @Html.DisplayFor(model => model.YieldWifi) %</b></h5>
+                <h5>RFCAL:<b> @Html.DisplayFor(model => model.YieldRFCal) %</b></h5>
+                <h5>NSFT:<b> @Html.DisplayFor(model => model.YieldNSFT) %</b></h5>
             </td>
             <td>
-                <h5>RADCURR:<b> %</b></h5>
-                <h5>VISION TOF:<b> %</b></h5>
-                <h5>ANT:<b> %</b></h5>
-                <h5>MMI 1:<b> %</b></h5>
-                <h5>MMI 2:<b> %</b></h5>
-                <h5>AUDIO:<b> %</b></h5>
+                <h5>RADCURR:<b> @Html.DisplayFor(model => model.YieldRadCurr) %</b></h5>
+                <h5>VISION TOF:<b> @Html.DisplayFor(model => model.YieldTOF) %</b></h5>
+                <h5>ANT:<b> @Html.DisplayFor(model => model.YieldANT) %</b></h5>
+                <h5>MMI 1:<b> @Html.DisplayFor(model => model.YieldMMI1) %</b></h5>
+                <h5>MMI 2:<b> @Html.DisplayFor(model => model.YieldMMI2) %</b></h5>
+                <h5>AUDIO:<b> @Html.DisplayFor(model => model.YieldMMI3) %</b></h5>
             </td>
             <td>
-                <h5>WRITE NUMBER:<b> %</b></h5>
-                <h5>CFC UPGRADE:<b> %</b></h5>
-                <h5>MMI 3:<b> %</b></h5>
+                <h5>WRITE NUMBER:<b> @Html.DisplayFor(model => model.YieldWriteNumber) %</b></h5>
+                <h5>CFC UPGRADE:<b> @Html.DisplayFor(model => model.YieldCFCUp) %</b></h5>
+                <h5>MMI 3:<b> @Html.DisplayFor(model => model.YieldMMI3) %</b></h5>
             </td>
         </tr>
 
