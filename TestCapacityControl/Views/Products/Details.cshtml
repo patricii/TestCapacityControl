@@ -2,64 +2,162 @@
 
 @{
     ViewData["Title"] = "Details";
-  
+
+
 }
 
-<h2>Resume Details</h2>
-
 <div>
-    <h4>Product: @Html.DisplayFor(model => model.ProductName)</h4>
-    <hr />
+    <h2>Product: @Html.DisplayFor(model => model.ProductName)</h2>
     <dl class="dl-horizontal"></dl>
 </div>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                <h3>ME</h3>
-            </th>
-            <th>
-                <h3>BE</h3>
-            </th>
-            <th>
-                <h3>CFC</h3>
-            </th>
-            <th>
-                <h3>PATS</h3>
-            </th>
-        </tr>
+    <thead>      
     </thead>
     <tbody>
         <tr>
+            <th>
+                <h1><u>YIELD</u></h1>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <h2>ME</h2>
+            </th>
+            <th>
+                <h2>BE</h2>
+            </th>
+            <th>
+                <h2>CFC</h2>
+            </th>
+            <th>
+                <h2>PATS</h2>
+            </th>
+        </tr>
+        <tr>
             <td>
-                <h5>IFLASH:<b> @Html.DisplayFor(model => model.YieldInline) %</b></h5>
-                <h5>BRDTEST:<b> @Html.DisplayFor(model => model.YieldBrdTest) %</b></h5>
-                <h5>BOARDTST:<b> @Html.DisplayFor(model => model.YieldBoardTst) %</b></h5>
-                <h5>5GFR1BDTST:<b> @Html.DisplayFor(model => model.Yield5GFR) %</b></h5>
+                <h4>IFLASH:<b> @Html.DisplayFor(model => model.YieldInline) %</b></h4>
+                <h4>BRDTEST:<b> @Html.DisplayFor(model => model.YieldBrdTest) %</b></h4>
+                <h4>BOARDTST:<b> @Html.DisplayFor(model => model.YieldBoardTst) %</b></h4>
+                <h4>5GFR1BDTST:<b> @Html.DisplayFor(model => model.Yield5GFR) %</b></h4>
             </td>
             <td>
-                <h5>DEPTHCAL:<b> @Html.DisplayFor(model => model.YieldDCAL) %</b></h5>
-                <h5>DEPTHVAL:<b> @Html.DisplayFor(model => model.YieldDVAL) %</b></h5>
-                <h5>CAMERACAL:<b> @Html.DisplayFor(model => model.YieldCamCAL) %</b></h5>
-                <h5>CAMERAVAL:<b> @Html.DisplayFor(model => model.YieldCamVAL) %</b></h5>
-                <h5>JOT:<b> @Html.DisplayFor(model => model.YieldJOT) %</b></h5>
-                <h5>L2 VISION:<b> @Html.DisplayFor(model => model.YieldL2Vision) %</b></h5>
-                <h5>L2 AR:<b> @Html.DisplayFor(model => model.YieldM2AR) %</b></h5>
-                <h5>M2 CAMERA:<b> @Html.DisplayFor(model => model.YieldM2Cam) %</b></h5>
-                <h5>M2 AR:<b> @Html.DisplayFor(model => model.YieldM2AR) %</b></h5>
-                <h5>JOT SLIM:<b> @Html.DisplayFor(model => model.YieldJotSlim) %</b></h5>
-                <h5>L2 AR SLIM:<b> @Html.DisplayFor(model => model.YieldARSlim) %</b></h5>
+                <h4>DEPTHCAL:<b> @Html.DisplayFor(model => model.YieldDCAL) %</b></h4>
+                <h4>DEPTHVAL:<b> @Html.DisplayFor(model => model.YieldDVAL) %</b></h4>
+                <h4>CAMERACAL:<b> @Html.DisplayFor(model => model.YieldCamCAL) %</b></h4>
+                <h4>CAMERAVAL:<b> @Html.DisplayFor(model => model.YieldCamVAL) %</b></h4>
+                <h4>JOT:<b> @Html.DisplayFor(model => model.YieldJOT) %</b></h4>
+                <h4>L2 VISION:<b> @Html.DisplayFor(model => model.YieldL2Vision) %</b></h4>
+                <h4>L2 AR:<b> @Html.DisplayFor(model => model.YieldM2AR) %</b></h4>
+                <h4>M2 CAMERA:<b> @Html.DisplayFor(model => model.YieldM2Cam) %</b></h4>
+                <h4>M2 AR:<b> @Html.DisplayFor(model => model.YieldM2AR) %</b></h4>
+                <h4>JOT SLIM:<b> @Html.DisplayFor(model => model.YieldJotSlim) %</b></h4>
+                <h4>L2 AR SLIM:<b> @Html.DisplayFor(model => model.YieldARSlim) %</b></h4>
             </td>
             <td>
-                <h5>CFC:<b> @Html.DisplayFor(model => model.YieldCFC) %</b></h5>
+                <h4>CFC:<b> @Html.DisplayFor(model => model.YieldCFC) %</b></h4>
             </td>
             <td>
-                <h5>PATS JOT:<b> @Html.DisplayFor(model => model.YieldPatsJot) %</b></h5>
-                <h5>PATS M2:<b> @Html.DisplayFor(model => model.YieldPatsM2) %</b></h5>
-                <h5>PATS SLIM:<b> @Html.DisplayFor(model => model.YieldPatsSlim) %</b></h5>
+                <h4>PATS JOT:<b> @Html.DisplayFor(model => model.YieldPatsJot) %</b></h4>
+                <h4>PATS M2:<b> @Html.DisplayFor(model => model.YieldPatsM2) %</b></h4>
+                <h4>PATS SLIM:<b> @Html.DisplayFor(model => model.YieldPatsSlim) %</b></h4>
             </td>
         </tr>
-
+        <tr>
+            <th>
+                <h1><u>NTF</u></h1>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <h2>ME</h2>
+            </th>
+            <th>
+                <h2>BE</h2>
+            </th>
+            <th>
+                <h2>CFC</h2>
+            </th>
+            <th>
+                <h2>PATS</h2>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <h4>IFLASH:<b> @Html.DisplayFor(model => model.NtfInline) %</b></h4>
+                <h4>BRDTEST:<b> @Html.DisplayFor(model => model.NtfBrdTest) %</b></h4>
+                <h4>BOARDTST:<b> @Html.DisplayFor(model => model.NtfBoardTst) %</b></h4>
+                <h4>5GFR1BDTST:<b> @Html.DisplayFor(model => model.Ntf5GFR) %</b></h4>
+            </td>
+            <td>
+                <h4>DEPTHCAL:<b> @Html.DisplayFor(model => model.NtfDCAL) %</b></h4>
+                <h4>DEPTHVAL:<b> @Html.DisplayFor(model => model.NtfDVAL) %</b></h4>
+                <h4>CAMERACAL:<b> @Html.DisplayFor(model => model.NtfCamCAL) %</b></h4>
+                <h4>CAMERAVAL:<b> @Html.DisplayFor(model => model.NtfCamVAL) %</b></h4>
+                <h4>JOT:<b> @Html.DisplayFor(model => model.NtfJOT) %</b></h4>
+                <h4>L2 VISION:<b> @Html.DisplayFor(model => model.NtfL2Vision) %</b></h4>
+                <h4>L2 AR:<b> @Html.DisplayFor(model => model.NtfM2AR) %</b></h4>
+                <h4>M2 CAMERA:<b> @Html.DisplayFor(model => model.NtfM2Cam) %</b></h4>
+                <h4>M2 AR:<b> @Html.DisplayFor(model => model.NtfM2AR) %</b></h4>
+                <h4>JOT SLIM:<b> @Html.DisplayFor(model => model.NtfJotSlim) %</b></h4>
+                <h4>L2 AR SLIM:<b> @Html.DisplayFor(model => model.NtfARSlim) %</b></h4>
+            </td>
+            <td>
+                <h4>CFC:<b> @Html.DisplayFor(model => model.NtfCFC) %</b></h4>
+            </td>
+            <td>
+                <h4>PATS JOT:<b> @Html.DisplayFor(model => model.NtfPatsJot) %</b></h4>
+                <h4>PATS M2:<b> @Html.DisplayFor(model => model.NtfPatsM2) %</b></h4>
+                <h4>PATS SLIM:<b> @Html.DisplayFor(model => model.NtfPatsSlim) %</b></h4>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h1><u>MCH. TIME</u></h1>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <h2>ME</h2>
+            </th>
+            <th>
+                <h2>BE</h2>
+            </th>
+            <th>
+                <h2>CFC</h2>
+            </th>
+            <th>
+                <h2>PATS</h2>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <h4>IFLASH:<b> @Html.DisplayFor(model => model.MTimeInline) s</b></h4>
+                <h4>BRDTEST:<b> @Html.DisplayFor(model => model.MTimeBrdTest) s</b></h4>
+                <h4>BOARDTST:<b> @Html.DisplayFor(model => model.MTimeBoardTst) s</b></h4>
+                <h4>5GFR1BDTST:<b> @Html.DisplayFor(model => model.MTime5GFR) s</b></h4>
+            </td>
+            <td>
+                <h4>DEPTHCAL:<b> @Html.DisplayFor(model => model.MTimeDCAL) s</b></h4>
+                <h4>DEPTHVAL:<b> @Html.DisplayFor(model => model.MTimeDVAL) s</b></h4>
+                <h4>CAMERACAL:<b> @Html.DisplayFor(model => model.MTimeCamCAL) s</b></h4>
+                <h4>CAMERAVAL:<b> @Html.DisplayFor(model => model.MTimeCamVAL) s</b></h4>
+                <h4>JOT:<b> @Html.DisplayFor(model => model.MTimeJOT) s</b></h4>
+                <h4>L2 VISION:<b> @Html.DisplayFor(model => model.MTimeL2Vision) s</b></h4>
+                <h4>L2 AR:<b> @Html.DisplayFor(model => model.MTimeM2AR) s</b></h4>
+                <h4>M2 CAMERA:<b> @Html.DisplayFor(model => model.MTimeM2Cam) s</b></h4>
+                <h4>M2 AR:<b> @Html.DisplayFor(model => model.MTimeM2AR) s</b></h4>
+                <h4>JOT SLIM:<b> @Html.DisplayFor(model => model.MTimeJotSlim) s</b></h4>
+                <h4>L2 AR SLIM:<b> @Html.DisplayFor(model => model.MTimeARSlim) s</b></h4>
+            </td>
+            <td>
+                <h4>CFC:<b> @Html.DisplayFor(model => model.MTimeCFC) s</b></h4>
+            </td>
+            <td>
+                <h4>PATS JOT:<b> @Html.DisplayFor(model => model.YieldPatsJot) s</b></h4>
+                <h4>PATS M2:<b> @Html.DisplayFor(model => model.YieldPatsM2) s</b></h4>
+                <h4>PATS SLIM:<b> @Html.DisplayFor(model => model.YieldPatsSlim) s</b></h4>
+            </td>
+        </tr>
     </tbody>
 </table>
 <div>
