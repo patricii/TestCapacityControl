@@ -22,10 +22,10 @@
                 @Html.DisplayNameFor(model => model.PowerSupply)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.License)
+                @Html.DisplayNameFor(model => model.PSAUX)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PSAUX)
+                @Html.DisplayNameFor(model => model.License)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TDD)
@@ -41,7 +41,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Product)
+                    <b>@Html.DisplayFor(modelItem => item.Product)</b>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.TestSets)
@@ -50,10 +50,10 @@
                     @Html.DisplayFor(modelItem => item.PowerSupply)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.License)
+                    @Html.DisplayFor(modelItem => item.PSAUX)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.PSAUX)
+                    @Html.DisplayFor(modelItem => item.License)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.TDD)
@@ -63,8 +63,9 @@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <!--<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>-->
+
+                <!--<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>-->
                 </td>
             </tr>
         }
