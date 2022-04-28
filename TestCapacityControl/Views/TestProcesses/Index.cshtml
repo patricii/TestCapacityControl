@@ -40,37 +40,38 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Technology)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.L2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.M2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JOT_Slim)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JOT)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WUHAN_L2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WUHAN_JOT_Slim)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WUHAN_JOT)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Technology)
+                </td>
+                <td>
+                    <mark><b>@Html.DisplayFor(modelItem => item.L2)</b></mark>
+                </td>
+                <td>
+                    <mark><b>@Html.DisplayFor(modelItem => item.M2)</b></mark>
+                </td>
+                <td>
+                    <mark><b>@Html.DisplayFor(modelItem => item.JOT_Slim)</b></mark>
+                </td>
+                <td>
+                    <mark><b>@Html.DisplayFor(modelItem => item.JOT)</b></mark>
+                </td>
+                <td>
+                    <mark><b>@Html.DisplayFor(modelItem => item.WUHAN_L2)</b></mark>
+                </td>
+                <td>
+                    <mark><b>@Html.DisplayFor(modelItem => item.WUHAN_JOT_Slim)</b></mark>
+                </td>
+                <td>
+                    <mark><b>@Html.DisplayFor(modelItem => item.WUHAN_JOT)</b></mark>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
