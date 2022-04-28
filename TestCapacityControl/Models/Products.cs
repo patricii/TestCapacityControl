@@ -71,7 +71,7 @@ namespace TestCapacityControl.Models
 
         public void runYield()
         {
-            if (ProductName == "ARUBA")
+            if (ProductName == "ARUBA") //example
             {
                 YieldInline = 98.3;
             }

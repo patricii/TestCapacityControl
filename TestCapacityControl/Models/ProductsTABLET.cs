@@ -52,5 +52,18 @@ namespace TestCapacityControl.Models
         public double MTimeCFCUp = 0.0;
         public double MTimeMMI3 = 0.0;
 
+        public void runYield()
+        {
+         
+        }
+        public void runNtf()
+        {
+            
+        }
+        public void runMTime()
+        {
+            
+        }
+
     }
 }
