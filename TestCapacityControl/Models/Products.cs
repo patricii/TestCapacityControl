@@ -18,7 +18,7 @@ namespace TestCapacityControl.Models
         public double YieldCamVAL = 0.0;
         public double YieldJOT = 0.0;
         public double YieldL2Vision = 0.0;
-        public double YieldL2AR= 0.0;
+        public double YieldL2AR = 0.0;
         public double YieldM2Cam = 0.0;
         public double YieldM2AR = 0.0;
         public double YieldJotSlim = 0.0;
@@ -26,7 +26,7 @@ namespace TestCapacityControl.Models
         public double YieldCFC = 0.0;
         public double YieldPatsJot = 0.0;
         public double YieldPatsM2 = 0.0;
-        public double YieldPatsSlim= 0.0;
+        public double YieldPatsSlim = 0.0;
 
         public double NtfInline = 0.0;
         public double NtfBrdTest = 0.0;
@@ -67,5 +67,31 @@ namespace TestCapacityControl.Models
         public double MTimePatsJot = 0.0;
         public double MTimePatsM2 = 0.0;
         public double MTimePatsSlim = 0.0;
+
+
+        public void runYield()
+        {
+            if (ProductName == "ARUBA")
+            {
+                YieldInline = 98.3;
+            }
+
+        }
+        public void runNtf()
+        {
+            if (ProductName == "ARUBA")
+            {
+                NtfInline = 99.5;
+            }
+
+        }
+        public void runMTime()
+        {
+            if (ProductName == "ARUBA")
+            {
+                MTimeInline = 253.7;
+            }
+
+        }
     }
 }

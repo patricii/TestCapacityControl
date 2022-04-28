@@ -2,11 +2,10 @@
 
 @{
     ViewData["Title"] = "Details";
-    if (Model.ProductName == "ARUBA")
-    {
-        Model.YieldInline = 98.4;
-        Model.YieldBrdTest = 97.56;
-    }
+
+    Model.runYield();
+    Model.runNtf();
+    Model.runMTime();
 
 
 }
