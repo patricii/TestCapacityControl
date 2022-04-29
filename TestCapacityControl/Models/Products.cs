@@ -71,26 +71,14 @@ namespace TestCapacityControl.Models
 
         public void runYield()
         {
-            if (ProductName == "ARUBA") //example
-            {
-                YieldInline = 98.3;
-            }
-
+            
         }
         public void runNtf()
         {
-            if (ProductName == "ARUBA")
-            {
-                NtfInline = 99.5;
-            }
 
         }
         public void runMTime()
         {
-            if (ProductName == "ARUBA")
-            {
-                MTimeInline = 253.7;
-            }
 
         }
     }
