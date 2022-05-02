@@ -230,6 +230,26 @@ namespace TestCapacityControl.Migrations
 
                     b.ToTable("TestRatesCelular");
                 });
+
+            modelBuilder.Entity("TestCapacityControl.Models.ViewModels.ProductME", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<double>("BoardTst");
+
+                    b.Property<double>("BrdTst");
+
+                    b.Property<double>("IFLASH");
+
+                    b.Property<string>("Product");
+
+                    b.Property<double>("_5GFR1");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductME");
+                });
 #pragma warning restore 612, 618
         }
     }

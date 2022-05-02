@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using TestCapacityControl.Models;
+using TestCapacityControl.Models.ViewModels;
 
 namespace TestCapacityControl.Models
 {
