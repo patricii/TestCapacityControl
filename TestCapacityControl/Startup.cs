@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using TestCapacityControl.Models;
+using TestCapacityControl.Data;
 
 namespace TestCapacityControl
 {
@@ -38,10 +39,11 @@ namespace TestCapacityControl
 
             services.AddDbContext<TestCapacityControlContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("TestCapacityControlContext"), builder => builder.MigrationsAssembly("TestCapacityControl")));
+            services.AddScoped<SeedingServiceCMW500>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingServiceCMW500 seedingServicecmw500)
         {
             if (env.IsDevelopment())
             {
@@ -52,7 +54,7 @@ namespace TestCapacityControl
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+            seedingServicecmw500.runUpdate(); //CMW500 list
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

@@ -25,5 +25,7 @@ namespace TestCapacityControl.Models
         public DbSet<TestCapacityControl.Models.ProductsTABLET> ProductsTABLET { get; set; }
 
         public DbSet<TestCapacityControl.Models.ProductSetup> ProductSetup { get; set; }
+
+        public DbSet<TestCapacityControl.Models.CMW500> CMW500 { get; set; }
     }
 }

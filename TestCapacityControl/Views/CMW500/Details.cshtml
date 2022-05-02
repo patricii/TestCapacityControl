@@ -1,0 +1,114 @@
+﻿@model TestCapacityControl.Models.CMW500
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CMW500</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Updated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Updated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Site)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Site)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Group)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Group)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Last_Station)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Last_Station)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Motorola)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_Motorola)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Flex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_Flex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SerialNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KM550_LTE_TDD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KM550_LTE_TDD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KM011_QC_CAL)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KM011_QC_CAL)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KV113_MTK_CAL)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KV113_MTK_CAL)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KM800_CDMA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KM800_CDMA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KB036_6GHz)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KB036_6GHz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KV120_Unisoc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KV120_Unisoc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WiFi_KM650_KM610)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WiFi_KM650_KM610)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

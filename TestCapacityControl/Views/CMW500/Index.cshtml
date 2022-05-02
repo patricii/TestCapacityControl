@@ -1,0 +1,128 @@
+﻿@model IEnumerable<TestCapacityControl.Models.CMW500>
+
+@{
+    ViewData["Title"] = "CMW500 Control";
+
+}
+
+<h2>CMW500 Control</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-default">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="success">
+            <th>
+                @Html.DisplayNameFor(model => model.Updated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Site)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Group)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Station)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Motorola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Flex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SerialNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KM550_LTE_TDD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KM011_QC_CAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KV113_MTK_CAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KM800_CDMA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KB036_6GHz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KV120_Unisoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WiFi_KM650_KM610)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Updated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Site)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Group)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Last_Station)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_Motorola)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_Flex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SerialNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KM550_LTE_TDD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KM011_QC_CAL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KV113_MTK_CAL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KM800_CDMA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KB036_6GHz)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KV120_Unisoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WiFi_KM650_KM610)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comments)
+                </td>
+                <!--<td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                    </td> -->
+            </tr>
+        }
+    </tbody>
+</table>

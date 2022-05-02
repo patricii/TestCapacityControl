@@ -1,0 +1,109 @@
+﻿@model TestCapacityControl.Models.CMW500
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>CMW500</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Updated" class="control-label"></label>
+                <input asp-for="Updated" class="form-control" />
+                <span asp-validation-for="Updated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Site" class="control-label"></label>
+                <input asp-for="Site" class="form-control" />
+                <span asp-validation-for="Site" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Group" class="control-label"></label>
+                <input asp-for="Group" class="form-control" />
+                <span asp-validation-for="Group" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Last_Station" class="control-label"></label>
+                <input asp-for="Last_Station" class="form-control" />
+                <span asp-validation-for="Last_Station" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_Motorola" class="control-label"></label>
+                <input asp-for="Id_Motorola" class="form-control" />
+                <span asp-validation-for="Id_Motorola" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_Flex" class="control-label"></label>
+                <input asp-for="Id_Flex" class="form-control" />
+                <span asp-validation-for="Id_Flex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SerialNumber" class="control-label"></label>
+                <input asp-for="SerialNumber" class="form-control" />
+                <span asp-validation-for="SerialNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KM550_LTE_TDD" class="control-label"></label>
+                <input asp-for="KM550_LTE_TDD" class="form-control" />
+                <span asp-validation-for="KM550_LTE_TDD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KM011_QC_CAL" class="control-label"></label>
+                <input asp-for="KM011_QC_CAL" class="form-control" />
+                <span asp-validation-for="KM011_QC_CAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KV113_MTK_CAL" class="control-label"></label>
+                <input asp-for="KV113_MTK_CAL" class="form-control" />
+                <span asp-validation-for="KV113_MTK_CAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KM800_CDMA" class="control-label"></label>
+                <input asp-for="KM800_CDMA" class="form-control" />
+                <span asp-validation-for="KM800_CDMA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KB036_6GHz" class="control-label"></label>
+                <input asp-for="KB036_6GHz" class="form-control" />
+                <span asp-validation-for="KB036_6GHz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KV120_Unisoc" class="control-label"></label>
+                <input asp-for="KV120_Unisoc" class="form-control" />
+                <span asp-validation-for="KV120_Unisoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WiFi_KM650_KM610" class="control-label"></label>
+                <input asp-for="WiFi_KM650_KM610" class="form-control" />
+                <span asp-validation-for="WiFi_KM650_KM610" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
