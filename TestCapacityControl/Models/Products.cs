@@ -71,7 +71,7 @@ namespace TestCapacityControl.Models
 
         public void runYield()
         {
-            
+
         }
         public void runNtf()
         {

@@ -49,6 +49,6 @@ namespace TestCapacityControl.Models
         }
         public CMW500()
         {
-        }     
+        }
     }
 }
