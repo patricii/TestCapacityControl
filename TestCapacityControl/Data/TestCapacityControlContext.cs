@@ -17,8 +17,6 @@ namespace TestCapacityControl.Models
 
         public DbSet<TestCapacityControl.Models.Departments> Departments { get; set; }
 
-        public DbSet<TestCapacityControl.Models.TestRatesCelular> TestRatesCelular { get; set; }
-
         public DbSet<TestCapacityControl.Models.TestProcess> TestProcess { get; set; }
 
         public DbSet<TestCapacityControl.Models.Products> Products { get; set; }
@@ -28,5 +26,6 @@ namespace TestCapacityControl.Models
         public DbSet<TestCapacityControl.Models.ProductSetup> ProductSetup { get; set; }
 
         public DbSet<TestCapacityControl.Models.CMW500> CMW500 { get; set; }
+
     }
 }

@@ -132,7 +132,7 @@ namespace TestCapacityControl.Migrations
 
                     b.ToTable("ProductsTABLET");
                 });
-
+          
             modelBuilder.Entity("TestCapacityControl.Models.TestProcess", b =>
                 {
                     b.Property<int>("Id")
@@ -159,97 +159,6 @@ namespace TestCapacityControl.Migrations
                     b.ToTable("TestProcess");
                 });
 
-            modelBuilder.Entity("TestCapacityControl.Models.TestRatesCelular", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CAMCALSlimFxt");
-
-                    b.Property<double>("CAMCALSlimNt");
-
-                    b.Property<int>("CAMCALSlimSpr");
-
-                    b.Property<double>("CAMCALSlimTotalUph");
-
-                    b.Property<double>("CAMCALSlimUph");
-
-                    b.Property<int>("CAMVALSlimFxt");
-
-                    b.Property<double>("CAMVALSlimNt");
-
-                    b.Property<int>("CAMVALSlimSpr");
-
-                    b.Property<double>("CAMVALSlimTotalUph");
-
-                    b.Property<double>("CAMVALSlimUph");
-
-                    b.Property<double>("CFCNt");
-
-                    b.Property<double>("CFCUph");
-
-                    b.Property<int>("FODSlimFxt");
-
-                    b.Property<double>("FODSlimNt");
-
-                    b.Property<int>("FODSlimSpr");
-
-                    b.Property<double>("FODSlimTotalUph");
-
-                    b.Property<double>("FODSlimUph");
-
-                    b.Property<double>("JOTSlimNt");
-
-                    b.Property<int>("JOTSlimPsps");
-
-                    b.Property<double>("JOTSlimTotalUph");
-
-                    b.Property<double>("JOTSlimUph");
-
-                    b.Property<int>("JotSlimSpr");
-
-                    b.Property<int>("L2ArSlimFxt");
-
-                    b.Property<double>("L2ArSlimNt");
-
-                    b.Property<int>("L2ArSlimSpr");
-
-                    b.Property<double>("L2ArSlimTotalUph");
-
-                    b.Property<double>("L2ArSlimUph");
-
-                    b.Property<double>("PATSSlimUph");
-
-                    b.Property<double>("PatsJotUph");
-
-                    b.Property<double>("PatsM2Uph");
-
-                    b.Property<string>("product");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TestRatesCelular");
-                });
-
-            modelBuilder.Entity("TestCapacityControl.Models.ViewModels.ProductME", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<double>("BoardTst");
-
-                    b.Property<double>("BrdTst");
-
-                    b.Property<double>("IFLASH");
-
-                    b.Property<string>("Product");
-
-                    b.Property<double>("_5GFR1");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ProductME");
-                });
 #pragma warning restore 612, 618
         }
     }
