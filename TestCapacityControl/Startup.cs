@@ -55,7 +55,9 @@ namespace TestCapacityControl
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-            seedingService.runUpdate(); //CMW500 list
+            seedingService.runUpdateCMW500();
+            seedingService.runUpdateProductsCelular(); 
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
