@@ -27,9 +27,8 @@ namespace TestCapacityControl.Models
 
         public string Comments { get; set; }
 
-        public CMW500(int id, DateTime updated, string site, string group, string last_Station, int id_Motorola, int id_Flex, int serialNumber, string type, int kM550_LTE_TDD, int kM011_QC_CAL, int kV113_MTK_CAL, int kM800_CDMA, int kB036_6GHz, int kV120_Unisoc, int wiFi_KM650_KM610, string comments)
+        public CMW500(DateTime updated, string site, string group, string last_Station, int id_Motorola, int id_Flex, int serialNumber, string type, int kM550_LTE_TDD, int kM011_QC_CAL, int kV113_MTK_CAL, int kM800_CDMA, int kB036_6GHz, int kV120_Unisoc, int wiFi_KM650_KM610, string comments)
         {
-            Id = id;
             Updated = updated;
             Site = site;
             Group = group;

@@ -39,11 +39,11 @@ namespace TestCapacityControl
 
             services.AddDbContext<TestCapacityControlContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("TestCapacityControlContext"), builder => builder.MigrationsAssembly("TestCapacityControl")));
-            services.AddScoped<SeedingServiceCMW500>();
+            services.AddScoped<SeedingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingServiceCMW500 seedingServicecmw500)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingService seedingService)
         {
             if (env.IsDevelopment())
             {
@@ -54,7 +54,7 @@ namespace TestCapacityControl
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-            seedingServicecmw500.runUpdate(); //CMW500 list
+            seedingService.runUpdate(); //CMW500 list
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
