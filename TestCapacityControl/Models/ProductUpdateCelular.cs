@@ -62,6 +62,7 @@ namespace TestCapacityControl.Models
         public double MTimeL2AR { get; set; }
         public double MTimeM2Cam { get; set; }
         public double MTimeM2AR { get; set; }
+
         public double MTimeJotSlim { get; set; }
         public double MTimeARSlim { get; set; }
         public double MTimeCFC { get; set; }

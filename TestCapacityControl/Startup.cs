@@ -39,6 +39,7 @@ namespace TestCapacityControl
 
             services.AddDbContext<TestCapacityControlContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("TestCapacityControlContext"), builder => builder.MigrationsAssembly("TestCapacityControl")));
+
             services.AddScoped<SeedingService>();
         }
 
