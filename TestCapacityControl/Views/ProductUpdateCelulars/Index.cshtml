@@ -1,0 +1,377 @@
+﻿@model IEnumerable<TestCapacityControl.Models.ProductUpdateCelular>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductNameUp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldInline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldBrdTest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldBoardTst)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yield5GFR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldDCAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldDVAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldCamCAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldCamVAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldJOT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldL2Vision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldL2AR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldM2Cam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldM2AR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldJotSlim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldARSlim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldCFC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldPatsJot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldPatsM2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldPatsSlim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfInline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfBrdTest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfBoardTst)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ntf5GFR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfDCAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfDVAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfCamCAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfCamVAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfJOT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfL2Vision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfL2AR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfM2Cam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfM2AR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfJotSlim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfARSlim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfCFC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfPatsJot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfPatsM2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfPatsSlim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeInline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeBrdTest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeBoardTst)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTime5GFR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeDCAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeDVAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeCamCAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeCamVAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeJOT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeL2Vision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeL2AR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeM2Cam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeM2AR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeJotSlim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeARSlim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeCFC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimePatsJot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimePatsM2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimePatsSlim)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductNameUp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldInline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldBrdTest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldBoardTst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yield5GFR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldDCAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldDVAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldCamCAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldCamVAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldJOT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldL2Vision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldL2AR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldM2Cam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldM2AR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldJotSlim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldARSlim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldCFC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldPatsJot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldPatsM2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldPatsSlim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfInline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfBrdTest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfBoardTst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ntf5GFR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfDCAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfDVAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfCamCAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfCamVAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfJOT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfL2Vision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfL2AR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfM2Cam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfM2AR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfJotSlim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfARSlim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfCFC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfPatsJot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfPatsM2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfPatsSlim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeInline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeBrdTest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeBoardTst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTime5GFR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeDCAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeDVAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeCamCAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeCamVAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeJOT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeL2Vision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeL2AR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeM2Cam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeM2AR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeJotSlim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeARSlim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeCFC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimePatsJot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimePatsM2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimePatsSlim)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

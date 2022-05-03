@@ -27,5 +27,7 @@ namespace TestCapacityControl.Models
 
         public DbSet<TestCapacityControl.Models.CMW500> CMW500 { get; set; }
 
+        public DbSet<TestCapacityControl.Models.ProductUpdateCelular> ProductUpdateCelular { get; set; }
+
     }
 }

@@ -8,7 +8,7 @@ namespace TestCapacityControl.Models
     public class ProductUpdateCelular
     {
         public int Id { get; set; }
-        public string ProductUpdate { get; set; }
+        public string ProductNameUp { get; set; }
         public double YieldInline { get; set; }
         public double YieldBrdTest { get; set; }
         public double YieldBoardTst { get; set; }

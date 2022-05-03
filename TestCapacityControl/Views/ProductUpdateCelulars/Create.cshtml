@@ -1,0 +1,318 @@
+﻿@model TestCapacityControl.Models.ProductUpdateCelular
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>ProductUpdateCelular</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProductNameUp" class="control-label"></label>
+                <input asp-for="ProductNameUp" class="form-control" />
+                <span asp-validation-for="ProductNameUp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldInline" class="control-label"></label>
+                <input asp-for="YieldInline" class="form-control" />
+                <span asp-validation-for="YieldInline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldBrdTest" class="control-label"></label>
+                <input asp-for="YieldBrdTest" class="form-control" />
+                <span asp-validation-for="YieldBrdTest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldBoardTst" class="control-label"></label>
+                <input asp-for="YieldBoardTst" class="form-control" />
+                <span asp-validation-for="YieldBoardTst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yield5GFR" class="control-label"></label>
+                <input asp-for="Yield5GFR" class="form-control" />
+                <span asp-validation-for="Yield5GFR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldDCAL" class="control-label"></label>
+                <input asp-for="YieldDCAL" class="form-control" />
+                <span asp-validation-for="YieldDCAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldDVAL" class="control-label"></label>
+                <input asp-for="YieldDVAL" class="form-control" />
+                <span asp-validation-for="YieldDVAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldCamCAL" class="control-label"></label>
+                <input asp-for="YieldCamCAL" class="form-control" />
+                <span asp-validation-for="YieldCamCAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldCamVAL" class="control-label"></label>
+                <input asp-for="YieldCamVAL" class="form-control" />
+                <span asp-validation-for="YieldCamVAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldJOT" class="control-label"></label>
+                <input asp-for="YieldJOT" class="form-control" />
+                <span asp-validation-for="YieldJOT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldL2Vision" class="control-label"></label>
+                <input asp-for="YieldL2Vision" class="form-control" />
+                <span asp-validation-for="YieldL2Vision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldL2AR" class="control-label"></label>
+                <input asp-for="YieldL2AR" class="form-control" />
+                <span asp-validation-for="YieldL2AR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldM2Cam" class="control-label"></label>
+                <input asp-for="YieldM2Cam" class="form-control" />
+                <span asp-validation-for="YieldM2Cam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldM2AR" class="control-label"></label>
+                <input asp-for="YieldM2AR" class="form-control" />
+                <span asp-validation-for="YieldM2AR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldJotSlim" class="control-label"></label>
+                <input asp-for="YieldJotSlim" class="form-control" />
+                <span asp-validation-for="YieldJotSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldARSlim" class="control-label"></label>
+                <input asp-for="YieldARSlim" class="form-control" />
+                <span asp-validation-for="YieldARSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldCFC" class="control-label"></label>
+                <input asp-for="YieldCFC" class="form-control" />
+                <span asp-validation-for="YieldCFC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldPatsJot" class="control-label"></label>
+                <input asp-for="YieldPatsJot" class="form-control" />
+                <span asp-validation-for="YieldPatsJot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldPatsM2" class="control-label"></label>
+                <input asp-for="YieldPatsM2" class="form-control" />
+                <span asp-validation-for="YieldPatsM2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldPatsSlim" class="control-label"></label>
+                <input asp-for="YieldPatsSlim" class="form-control" />
+                <span asp-validation-for="YieldPatsSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfInline" class="control-label"></label>
+                <input asp-for="NtfInline" class="form-control" />
+                <span asp-validation-for="NtfInline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfBrdTest" class="control-label"></label>
+                <input asp-for="NtfBrdTest" class="form-control" />
+                <span asp-validation-for="NtfBrdTest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfBoardTst" class="control-label"></label>
+                <input asp-for="NtfBoardTst" class="form-control" />
+                <span asp-validation-for="NtfBoardTst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ntf5GFR" class="control-label"></label>
+                <input asp-for="Ntf5GFR" class="form-control" />
+                <span asp-validation-for="Ntf5GFR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfDCAL" class="control-label"></label>
+                <input asp-for="NtfDCAL" class="form-control" />
+                <span asp-validation-for="NtfDCAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfDVAL" class="control-label"></label>
+                <input asp-for="NtfDVAL" class="form-control" />
+                <span asp-validation-for="NtfDVAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfCamCAL" class="control-label"></label>
+                <input asp-for="NtfCamCAL" class="form-control" />
+                <span asp-validation-for="NtfCamCAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfCamVAL" class="control-label"></label>
+                <input asp-for="NtfCamVAL" class="form-control" />
+                <span asp-validation-for="NtfCamVAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfJOT" class="control-label"></label>
+                <input asp-for="NtfJOT" class="form-control" />
+                <span asp-validation-for="NtfJOT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfL2Vision" class="control-label"></label>
+                <input asp-for="NtfL2Vision" class="form-control" />
+                <span asp-validation-for="NtfL2Vision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfL2AR" class="control-label"></label>
+                <input asp-for="NtfL2AR" class="form-control" />
+                <span asp-validation-for="NtfL2AR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfM2Cam" class="control-label"></label>
+                <input asp-for="NtfM2Cam" class="form-control" />
+                <span asp-validation-for="NtfM2Cam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfM2AR" class="control-label"></label>
+                <input asp-for="NtfM2AR" class="form-control" />
+                <span asp-validation-for="NtfM2AR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfJotSlim" class="control-label"></label>
+                <input asp-for="NtfJotSlim" class="form-control" />
+                <span asp-validation-for="NtfJotSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfARSlim" class="control-label"></label>
+                <input asp-for="NtfARSlim" class="form-control" />
+                <span asp-validation-for="NtfARSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfCFC" class="control-label"></label>
+                <input asp-for="NtfCFC" class="form-control" />
+                <span asp-validation-for="NtfCFC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfPatsJot" class="control-label"></label>
+                <input asp-for="NtfPatsJot" class="form-control" />
+                <span asp-validation-for="NtfPatsJot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfPatsM2" class="control-label"></label>
+                <input asp-for="NtfPatsM2" class="form-control" />
+                <span asp-validation-for="NtfPatsM2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfPatsSlim" class="control-label"></label>
+                <input asp-for="NtfPatsSlim" class="form-control" />
+                <span asp-validation-for="NtfPatsSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeInline" class="control-label"></label>
+                <input asp-for="MTimeInline" class="form-control" />
+                <span asp-validation-for="MTimeInline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeBrdTest" class="control-label"></label>
+                <input asp-for="MTimeBrdTest" class="form-control" />
+                <span asp-validation-for="MTimeBrdTest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeBoardTst" class="control-label"></label>
+                <input asp-for="MTimeBoardTst" class="form-control" />
+                <span asp-validation-for="MTimeBoardTst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTime5GFR" class="control-label"></label>
+                <input asp-for="MTime5GFR" class="form-control" />
+                <span asp-validation-for="MTime5GFR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeDCAL" class="control-label"></label>
+                <input asp-for="MTimeDCAL" class="form-control" />
+                <span asp-validation-for="MTimeDCAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeDVAL" class="control-label"></label>
+                <input asp-for="MTimeDVAL" class="form-control" />
+                <span asp-validation-for="MTimeDVAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeCamCAL" class="control-label"></label>
+                <input asp-for="MTimeCamCAL" class="form-control" />
+                <span asp-validation-for="MTimeCamCAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeCamVAL" class="control-label"></label>
+                <input asp-for="MTimeCamVAL" class="form-control" />
+                <span asp-validation-for="MTimeCamVAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeJOT" class="control-label"></label>
+                <input asp-for="MTimeJOT" class="form-control" />
+                <span asp-validation-for="MTimeJOT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeL2Vision" class="control-label"></label>
+                <input asp-for="MTimeL2Vision" class="form-control" />
+                <span asp-validation-for="MTimeL2Vision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeL2AR" class="control-label"></label>
+                <input asp-for="MTimeL2AR" class="form-control" />
+                <span asp-validation-for="MTimeL2AR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeM2Cam" class="control-label"></label>
+                <input asp-for="MTimeM2Cam" class="form-control" />
+                <span asp-validation-for="MTimeM2Cam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeM2AR" class="control-label"></label>
+                <input asp-for="MTimeM2AR" class="form-control" />
+                <span asp-validation-for="MTimeM2AR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeJotSlim" class="control-label"></label>
+                <input asp-for="MTimeJotSlim" class="form-control" />
+                <span asp-validation-for="MTimeJotSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeARSlim" class="control-label"></label>
+                <input asp-for="MTimeARSlim" class="form-control" />
+                <span asp-validation-for="MTimeARSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeCFC" class="control-label"></label>
+                <input asp-for="MTimeCFC" class="form-control" />
+                <span asp-validation-for="MTimeCFC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimePatsJot" class="control-label"></label>
+                <input asp-for="MTimePatsJot" class="form-control" />
+                <span asp-validation-for="MTimePatsJot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimePatsM2" class="control-label"></label>
+                <input asp-for="MTimePatsM2" class="form-control" />
+                <span asp-validation-for="MTimePatsM2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimePatsSlim" class="control-label"></label>
+                <input asp-for="MTimePatsSlim" class="form-control" />
+                <span asp-validation-for="MTimePatsSlim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
