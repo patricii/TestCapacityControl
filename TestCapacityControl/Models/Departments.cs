@@ -9,6 +9,8 @@ namespace TestCapacityControl.Models
     public class Departments
     {
         public int Id { get; set; }
+
+        [Required]
         public string Name { get; set; }
 
         [Display (Name = "Job Title")]
@@ -17,6 +19,7 @@ namespace TestCapacityControl.Models
 
         [Display(Name = "E-mail")]
         [DataType(DataType.EmailAddress)]
+        [EmailAddress(ErrorMessage = "Enter a valid e-mail")]
         public string Email { get; set; }
     }
 }
