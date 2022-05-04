@@ -9,6 +9,8 @@ namespace TestCapacityControl.Models
     public class CMW500
     {
         public int Id { get; set; }
+
+        [DataType (DataType.Date)]
         public DateTime Updated { get; set; }
         public string Site { get; set; }
         public string Group { get; set; }

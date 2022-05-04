@@ -16,6 +16,7 @@ namespace TestCapacityControl.Models
         public string Scope { get; set; }
 
         [Display(Name = "E-mail")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }
 }
