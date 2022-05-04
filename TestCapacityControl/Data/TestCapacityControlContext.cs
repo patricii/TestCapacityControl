@@ -29,5 +29,7 @@ namespace TestCapacityControl.Models
 
         public DbSet<TestCapacityControl.Models.ProductUpdateCelular> ProductUpdateCelular { get; set; }
 
+        public DbSet<TestCapacityControl.Models.ProductUpdateTablet> ProductUpdateTablet { get; set; }
+
     }
 }

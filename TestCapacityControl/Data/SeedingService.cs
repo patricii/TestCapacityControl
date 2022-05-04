@@ -202,6 +202,29 @@ namespace TestCapacityControl.Data
             _context.SaveChanges();
 
         }
+        public void runUpdateProductsTable()
+        {
+            try
+            {
+                using (MySqlConnection cnn = new MySqlConnection("server=localhost;userid=developer;password=326727;database=TestCapacityControlappdb"))
+                using (MySqlCommand cmd = new MySqlCommand("TRUNCATE TABLE PRODUCTUPDATETABLET", cnn))
+                {
+                    cnn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                throw new DBException("TRUNCATE TABLE PRODUCTUPDATETABLET error!!!");
+            }
 
+            ProductUpdateTablet p1 = new ProductUpdateTablet("ARNO WIFI LENOVO", 99.72,0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+            ProductUpdateTablet p2 = new ProductUpdateTablet("ARNO LTE LENOVO", 99.72, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+            ProductUpdateTablet p3 = new ProductUpdateTablet("ARNO G70 LTE", 99.72, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+            ProductUpdateTablet p4 = new ProductUpdateTablet("ARNO G71 WIFI", 99.72, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+            _context.ProductUpdateTablet.AddRange(p1, p2, p3, p4);
+            _context.SaveChanges();
+
+        }
     }
 }

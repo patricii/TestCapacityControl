@@ -1,0 +1,228 @@
+﻿@model TestCapacityControl.Models.ProductUpdateTablet
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>ProductUpdateTablet</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProductNameUp" class="control-label"></label>
+                <input asp-for="ProductNameUp" class="form-control" />
+                <span asp-validation-for="ProductNameUp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldInline" class="control-label"></label>
+                <input asp-for="YieldInline" class="form-control" />
+                <span asp-validation-for="YieldInline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldWifi" class="control-label"></label>
+                <input asp-for="YieldWifi" class="form-control" />
+                <span asp-validation-for="YieldWifi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldRFCal" class="control-label"></label>
+                <input asp-for="YieldRFCal" class="form-control" />
+                <span asp-validation-for="YieldRFCal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldNSFT" class="control-label"></label>
+                <input asp-for="YieldNSFT" class="form-control" />
+                <span asp-validation-for="YieldNSFT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldRadCurr" class="control-label"></label>
+                <input asp-for="YieldRadCurr" class="form-control" />
+                <span asp-validation-for="YieldRadCurr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldTOF" class="control-label"></label>
+                <input asp-for="YieldTOF" class="form-control" />
+                <span asp-validation-for="YieldTOF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldANT" class="control-label"></label>
+                <input asp-for="YieldANT" class="form-control" />
+                <span asp-validation-for="YieldANT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldMMI1" class="control-label"></label>
+                <input asp-for="YieldMMI1" class="form-control" />
+                <span asp-validation-for="YieldMMI1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldMMI2" class="control-label"></label>
+                <input asp-for="YieldMMI2" class="form-control" />
+                <span asp-validation-for="YieldMMI2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldAudio" class="control-label"></label>
+                <input asp-for="YieldAudio" class="form-control" />
+                <span asp-validation-for="YieldAudio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldWriteNumber" class="control-label"></label>
+                <input asp-for="YieldWriteNumber" class="form-control" />
+                <span asp-validation-for="YieldWriteNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldCFCUp" class="control-label"></label>
+                <input asp-for="YieldCFCUp" class="form-control" />
+                <span asp-validation-for="YieldCFCUp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YieldMMI3" class="control-label"></label>
+                <input asp-for="YieldMMI3" class="form-control" />
+                <span asp-validation-for="YieldMMI3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfInline" class="control-label"></label>
+                <input asp-for="NtfInline" class="form-control" />
+                <span asp-validation-for="NtfInline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfWifi" class="control-label"></label>
+                <input asp-for="NtfWifi" class="form-control" />
+                <span asp-validation-for="NtfWifi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfRFCal" class="control-label"></label>
+                <input asp-for="NtfRFCal" class="form-control" />
+                <span asp-validation-for="NtfRFCal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfNSFT" class="control-label"></label>
+                <input asp-for="NtfNSFT" class="form-control" />
+                <span asp-validation-for="NtfNSFT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfRadCurr" class="control-label"></label>
+                <input asp-for="NtfRadCurr" class="form-control" />
+                <span asp-validation-for="NtfRadCurr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfTOF" class="control-label"></label>
+                <input asp-for="NtfTOF" class="form-control" />
+                <span asp-validation-for="NtfTOF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfANT" class="control-label"></label>
+                <input asp-for="NtfANT" class="form-control" />
+                <span asp-validation-for="NtfANT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfMMI1" class="control-label"></label>
+                <input asp-for="NtfMMI1" class="form-control" />
+                <span asp-validation-for="NtfMMI1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfMMI2" class="control-label"></label>
+                <input asp-for="NtfMMI2" class="form-control" />
+                <span asp-validation-for="NtfMMI2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfAudio" class="control-label"></label>
+                <input asp-for="NtfAudio" class="form-control" />
+                <span asp-validation-for="NtfAudio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfWriteNumber" class="control-label"></label>
+                <input asp-for="NtfWriteNumber" class="form-control" />
+                <span asp-validation-for="NtfWriteNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfCFCUp" class="control-label"></label>
+                <input asp-for="NtfCFCUp" class="form-control" />
+                <span asp-validation-for="NtfCFCUp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NtfMMI3" class="control-label"></label>
+                <input asp-for="NtfMMI3" class="form-control" />
+                <span asp-validation-for="NtfMMI3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeInline" class="control-label"></label>
+                <input asp-for="MTimeInline" class="form-control" />
+                <span asp-validation-for="MTimeInline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeWifi" class="control-label"></label>
+                <input asp-for="MTimeWifi" class="form-control" />
+                <span asp-validation-for="MTimeWifi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeRFCal" class="control-label"></label>
+                <input asp-for="MTimeRFCal" class="form-control" />
+                <span asp-validation-for="MTimeRFCal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeNSFT" class="control-label"></label>
+                <input asp-for="MTimeNSFT" class="form-control" />
+                <span asp-validation-for="MTimeNSFT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeRadCurr" class="control-label"></label>
+                <input asp-for="MTimeRadCurr" class="form-control" />
+                <span asp-validation-for="MTimeRadCurr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeTOF" class="control-label"></label>
+                <input asp-for="MTimeTOF" class="form-control" />
+                <span asp-validation-for="MTimeTOF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeANT" class="control-label"></label>
+                <input asp-for="MTimeANT" class="form-control" />
+                <span asp-validation-for="MTimeANT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeMMI1" class="control-label"></label>
+                <input asp-for="MTimeMMI1" class="form-control" />
+                <span asp-validation-for="MTimeMMI1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeMMI2" class="control-label"></label>
+                <input asp-for="MTimeMMI2" class="form-control" />
+                <span asp-validation-for="MTimeMMI2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeAudio" class="control-label"></label>
+                <input asp-for="MTimeAudio" class="form-control" />
+                <span asp-validation-for="MTimeAudio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeWriteNumber" class="control-label"></label>
+                <input asp-for="MTimeWriteNumber" class="form-control" />
+                <span asp-validation-for="MTimeWriteNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeCFCUp" class="control-label"></label>
+                <input asp-for="MTimeCFCUp" class="form-control" />
+                <span asp-validation-for="MTimeCFCUp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTimeMMI3" class="control-label"></label>
+                <input asp-for="MTimeMMI3" class="form-control" />
+                <span asp-validation-for="MTimeMMI3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
