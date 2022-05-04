@@ -1,4 +1,5 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using TestCapacityControl.Exceptions;
 
@@ -7,6 +8,8 @@ namespace TestCapacityControl.Models
     public class Products
     {
         public int Id { get; set; }
+
+        [Display (Name = "Product Name")]
         public string ProductName { get; set; }
         public string Model { get; set; }
         public string Status { get; set; }

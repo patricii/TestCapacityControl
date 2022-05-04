@@ -1,10 +1,14 @@
 ﻿
 
+using System.ComponentModel.DataAnnotations;
+
 namespace TestCapacityControl.Models
 {
     public class ProductsTABLET
     {
         public int Id { get; set; }
+
+        [Display(Name = "Product Name")]
         public string ProductName { get; set; }
         public string Model { get; set; }
         public string Status { get; set; }
