@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TestCapacityControl.Migrations
 {
-    public partial class ProductsUpdateCelular : Migration
+    public partial class ProductUpgradeCelular : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

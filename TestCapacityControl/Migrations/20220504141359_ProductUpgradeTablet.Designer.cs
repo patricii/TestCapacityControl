@@ -9,8 +9,8 @@ using TestCapacityControl.Models;
 namespace TestCapacityControl.Migrations
 {
     [DbContext(typeof(TestCapacityControlContext))]
-    [Migration("20220503124102_ProductsUpdateCelular")]
-    partial class ProductsUpdateCelular
+    [Migration("20220504141359_ProductUpgradeTablet")]
+    partial class ProductUpgradeTablet
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -70,7 +70,8 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<string>("JobTitle");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<string>("Scope");
 
@@ -259,6 +260,96 @@ namespace TestCapacityControl.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductUpdateCelular");
+                });
+
+            modelBuilder.Entity("TestCapacityControl.Models.ProductUpdateTablet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<double>("MTimeANT");
+
+                    b.Property<double>("MTimeAudio");
+
+                    b.Property<double>("MTimeCFCUp");
+
+                    b.Property<double>("MTimeInline");
+
+                    b.Property<double>("MTimeMMI1");
+
+                    b.Property<double>("MTimeMMI2");
+
+                    b.Property<double>("MTimeMMI3");
+
+                    b.Property<double>("MTimeNSFT");
+
+                    b.Property<double>("MTimeRFCal");
+
+                    b.Property<double>("MTimeRadCurr");
+
+                    b.Property<double>("MTimeTOF");
+
+                    b.Property<double>("MTimeWifi");
+
+                    b.Property<double>("MTimeWriteNumber");
+
+                    b.Property<double>("NtfANT");
+
+                    b.Property<double>("NtfAudio");
+
+                    b.Property<double>("NtfCFCUp");
+
+                    b.Property<double>("NtfInline");
+
+                    b.Property<double>("NtfMMI1");
+
+                    b.Property<double>("NtfMMI2");
+
+                    b.Property<double>("NtfMMI3");
+
+                    b.Property<double>("NtfNSFT");
+
+                    b.Property<double>("NtfRFCal");
+
+                    b.Property<double>("NtfRadCurr");
+
+                    b.Property<double>("NtfTOF");
+
+                    b.Property<double>("NtfWifi");
+
+                    b.Property<double>("NtfWriteNumber");
+
+                    b.Property<string>("ProductNameUp");
+
+                    b.Property<double>("YieldANT");
+
+                    b.Property<double>("YieldAudio");
+
+                    b.Property<double>("YieldCFCUp");
+
+                    b.Property<double>("YieldInline");
+
+                    b.Property<double>("YieldMMI1");
+
+                    b.Property<double>("YieldMMI2");
+
+                    b.Property<double>("YieldMMI3");
+
+                    b.Property<double>("YieldNSFT");
+
+                    b.Property<double>("YieldRFCal");
+
+                    b.Property<double>("YieldRadCurr");
+
+                    b.Property<double>("YieldTOF");
+
+                    b.Property<double>("YieldWifi");
+
+                    b.Property<double>("YieldWriteNumber");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductUpdateTablet");
                 });
 
             modelBuilder.Entity("TestCapacityControl.Models.TestProcess", b =>

@@ -1,0 +1,269 @@
+﻿@model IEnumerable<TestCapacityControl.Models.ProductUpdateTablet>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductNameUp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldInline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldWifi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldRFCal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldNSFT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldRadCurr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldTOF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldANT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldMMI1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldMMI2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldAudio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldWriteNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldCFCUp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YieldMMI3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfInline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfWifi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfRFCal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfNSFT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfRadCurr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfTOF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfANT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfMMI1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfMMI2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfAudio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfWriteNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfCFCUp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NtfMMI3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeInline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeWifi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeRFCal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeNSFT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeRadCurr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeTOF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeANT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeMMI1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeMMI2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeAudio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeWriteNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeCFCUp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTimeMMI3)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductNameUp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldInline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldWifi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldRFCal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldNSFT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldRadCurr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldTOF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldANT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldMMI1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldMMI2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldAudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldWriteNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldCFCUp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YieldMMI3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfInline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfWifi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfRFCal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfNSFT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfRadCurr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfTOF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfANT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfMMI1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfMMI2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfAudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfWriteNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfCFCUp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NtfMMI3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeInline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeWifi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeRFCal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeNSFT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeRadCurr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeTOF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeANT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeMMI1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeMMI2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeAudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeWriteNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeCFCUp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTimeMMI3)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
