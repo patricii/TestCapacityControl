@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,18 +12,40 @@ namespace TestCapacityControl.Models
         public DateTime Updated { get; set; }
         public string Site { get; set; }
         public string Group { get; set; }
+
+        [Display (Name = "Last Station")]
         public string Last_Station { get; set; }
+
+        [Display(Name = "ID Motorola")]
         public int Id_Motorola { get; set; }
+
+        [Display(Name = "ID FLEX")]
         public int Id_Flex { get; set; }
+
+        [Display(Name = "Serial Number")]
         public int SerialNumber { get; set; }
+
         public string Type { get; set; }
 
+        [Display(Name = "KM550 LTE TDD")]
         public int KM550_LTE_TDD { get; set; }
+
+        [Display(Name = "KM011 QC CAL")]
         public int KM011_QC_CAL { get; set; }
+
+        [Display(Name = "KV113 MTK CAL")]
         public int KV113_MTK_CAL { get; set; }
+
+        [Display(Name = "KM800 CDMA")]
         public int KM800_CDMA { get; set; }
+
+        [Display(Name = "KB036 6GHz")]
         public int KB036_6GHz { get; set; }
+
+        [Display(Name = "KV120 UNISOC")]
         public int KV120_Unisoc { get; set; }
+
+        [Display(Name = "WIFI KM650/KM651 KM656/KM610")]
         public int WiFi_KM650_KM610 { get; set; }
 
         public string Comments { get; set; }

@@ -42,12 +42,12 @@ namespace TestCapacityControl.Data
             CMW500 c7 = new CMW500(new DateTime(2020, 9, 14), "MAO", "ME", "ME04-PB91F1T04-BT001A", 200418093, 2725, 141467, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c8 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME10-PB91F1T10-BT002A", 200418092, 2733, 141468, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c9 = new CMW500(new DateTime(2021, 4, 10), "JAG", "ME", "ME07-PB01F1T07-BT001A", 200418091, 2727, 141469, "DUAL", 2, 2, 2, 2, 2, 0, 2, "NA");
-            CMW500 c10 = new CMW500(new DateTime(2021, 10, 4), "JAG", "ME", "ME03-PB01F1T03-BT005A", 200418089, 2728, 141470, "DUAL", 2, 2, 2, 2, 2, 0, 2, "NA");
+            CMW500 c10 = new CMW500(new DateTime(2021, 10, 4), "JAG", "ME", "ME03-PB01F1T03-BT005A", 200418089, 2728, 141470, "DUAL", 2, 2, 2, 2, 2, 0, 2, "NA");    
+            CMW500 c11 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME11-PB91F1T11-BT002A	", 200418062, 2729, 141471, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
+            CMW500 c12 = new CMW500(new DateTime(2021, 9, 2), "JAG", "ME", "ME08-PB01F1T08-BT006A", 200418079, 2730, 141472, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
+            CMW500 c13 = new CMW500(new DateTime(2021, 8, 31), "MAO", "ME", "NA", 200418078, 2731, 141473, "DUAL", 2, 2, 2, 0, 0, 2, 0, "enviado para MAN - 20210831 - Projeto Caxangá");
+            CMW500 c14 = new CMW500(new DateTime(2021, 2, 9), "JAG", "ME", "ME07-PB01F1T07-BT005A", 200418053, 2732, 141474, "DUAL", 2, 2, 2, 0, 0, 0, 0, "Projeto CAXANGA: Troca com Manaus por EXM - recebe licença temporaria JAVA");
 
-            CMW500 c11 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME04-PB91F1T04-BT002A", 200418067, 2594, 141461, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
-            CMW500 c12 = new CMW500(new DateTime(2021, 9, 2), "JAG", "ME", "ME08-PB01F1T08-BT005A", 200418022, 2596, 141462, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
-            CMW500 c13 = new CMW500(new DateTime(2020, 9, 23), "MAO", "ME", "REPARO", 200418058, 2597, 141463, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
-            CMW500 c14 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME15-PB91F1T15-BT003A", 200418055, 2722, 141464, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
             CMW500 c15 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME15-PB91F1T15-BT001A", 200418066, 2723, 141465, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
             CMW500 c16 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME04-PB91F1T04-BT002A", 200418067, 2594, 141461, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c17 = new CMW500(new DateTime(2021, 9, 2), "JAG", "ME", "ME08-PB01F1T08-BT005A", 200418022, 2596, 141462, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
