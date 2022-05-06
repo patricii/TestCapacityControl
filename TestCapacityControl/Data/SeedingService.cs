@@ -63,13 +63,13 @@ namespace TestCapacityControl.Data
             CMW500 c28 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME05-PB91F1T05-BT005A", 200418072, 2746, 141488, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c29 = new CMW500(new DateTime(2020, 9, 17), "MAO", "RP", "REPARO", 200418094, 2747, 141489, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c30 = new CMW500(new DateTime(2021, 2, 9), "JAG", "ME", "ME08-PB01F1T08-BT003A", 200418098, 2748, 141490, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
+            CMW500 c31 = new CMW500(new DateTime(2020, 9, 30), "MAO", "ME", "ME02-PB91F1T02-BT004A", 200418071, 2749, 141491, "DUAL", 2, 2, 2, 0, 0, 2, 0, "KV120 - definitiva - 20210728");
+            CMW500 c32 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME04-PB91F1T04-BT003A", 200418096, 2750, 141492, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
+            CMW500 c33 = new CMW500(new DateTime(2020, 11, 12), "MAO", "ME", "ME17-PB91F1T17-BT001C", 200418097, 2751, 141493, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
+            CMW500 c34 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "NA", 200418086, 2752, 141494, "DUAL", 2, 2, 2, 0, 0, 2, 0, "Enviado para MAN - 20210824 - Projeto Caxangá");
+            CMW500 c35 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME16-PB91F1T16-BT005A", 200418073, 2753, 141495, "DUAL", 2, 2, 2, 0, 0, 2, 0, "KV120 - definitiva - 20210728");
+            CMW500 c36 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME17-PB91F1T17-BT007A", 200418080, 2754, 141496, "DUAL", 2, 2, 2, 0, 0, 2, 0, "KV120 - definitiva - 20210728");
 
-            CMW500 c31 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME04-PB91F1T04-BT002A", 200418067, 2594, 141461, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
-            CMW500 c32 = new CMW500(new DateTime(2021, 9, 2), "JAG", "ME", "ME08-PB01F1T08-BT005A", 200418022, 2596, 141462, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
-            CMW500 c33 = new CMW500(new DateTime(2020, 9, 23), "MAO", "ME", "REPARO", 200418058, 2597, 141463, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
-            CMW500 c34 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME15-PB91F1T15-BT003A", 200418055, 2722, 141464, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
-            CMW500 c35 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME15-PB91F1T15-BT001A", 200418066, 2723, 141465, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
-            CMW500 c36 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME04-PB91F1T04-BT002A", 200418067, 2594, 141461, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c37 = new CMW500(new DateTime(2021, 9, 2), "JAG", "ME", "ME08-PB01F1T08-BT005A", 200418022, 2596, 141462, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c38 = new CMW500(new DateTime(2020, 9, 23), "MAO", "ME", "REPARO", 200418058, 2597, 141463, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c39 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME15-PB91F1T15-BT003A", 200418055, 2722, 141464, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
@@ -196,8 +196,9 @@ namespace TestCapacityControl.Data
             ProductUpdateCelular p32 = new ProductUpdateCelular("CAPRI", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
             ProductUpdateCelular p33 = new ProductUpdateCelular("CAPRI PLUS", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
             ProductUpdateCelular p34 = new ProductUpdateCelular("GUAM20", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+            ProductUpdateCelular p35 = new ProductUpdateCelular("BORA T", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
 
-            _context.ProductUpdateCelular.AddRange(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34);
+            _context.ProductUpdateCelular.AddRange(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35);
             _context.SaveChanges();
 
         }
@@ -221,6 +222,7 @@ namespace TestCapacityControl.Data
             ProductUpdateTablet p2 = new ProductUpdateTablet("ARNO LTE LENOVO", 99.72, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
             ProductUpdateTablet p3 = new ProductUpdateTablet("ARNO G70 LTE", 99.72, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
             ProductUpdateTablet p4 = new ProductUpdateTablet("ARNO G71 WIFI", 99.72, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+
             _context.ProductUpdateTablet.AddRange(p1, p2, p3, p4);
             _context.SaveChanges();
 

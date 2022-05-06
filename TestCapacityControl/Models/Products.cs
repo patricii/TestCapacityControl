@@ -9,7 +9,7 @@ namespace TestCapacityControl.Models
     {
         public int Id { get; set; }
 
-        [Display (Name = "Product Name")]
+        [Display(Name = "Product Name")]
         public string ProductName { get; set; }
         public string Model { get; set; }
         public string Status { get; set; }
@@ -74,13 +74,14 @@ namespace TestCapacityControl.Models
         public double MTimePatsM2 = 0.0;
         public double MTimePatsSlim = 0.0;
 
-        private TestCapacityControlContext _context;
+        
+        private TestCapacityControlContext _context;          
         public Products(TestCapacityControlContext context)
         {
             _context = context;
         }
 
-        public void runUpdate()
+        public void runUpdate() //To Update the data from DB
         {
             try
             {
@@ -149,9 +150,7 @@ namespace TestCapacityControl.Models
                 throw new NotFoundException("Product Data Not Found!!!");
             }
 
-
-
         }
-
+        
     }
 }
