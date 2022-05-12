@@ -14,6 +14,18 @@ namespace TestCapacityControl.Models
         public string Model { get; set; }
         public string Status { get; set; }
 
+        public Products() {
+
+        }
+
+        public Products(int id, string productName, string model, string status)
+        {
+            Id = id;
+            ProductName = productName;
+            Model = model;
+            Status = status;
+        }
+
         public double YieldInline = 0.0;
         public double YieldBrdTest = 0.0;
         public double YieldBoardTst = 0.0;
@@ -74,11 +86,11 @@ namespace TestCapacityControl.Models
         public double MTimePatsM2 = 0.0;
         public double MTimePatsSlim = 0.0;
 
-        
         private TestCapacityControlContext _context;          
         public Products(TestCapacityControlContext context)
         {
             _context = context;
+            
         }
 
         public void runUpdate() //To Update the data from DB

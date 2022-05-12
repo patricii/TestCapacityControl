@@ -15,6 +15,16 @@ namespace TestCapacityControl.Models
         public string Model { get; set; }
         public string Status { get; set; }
 
+        public ProductsTABLET() {
+
+        }
+        public ProductsTABLET(int id, string productName, string model, string status)
+        {
+            Id = id;
+            ProductName = productName;
+            Model = model;
+            Status = status;
+        }
 
         public double YieldInline = 0.0;
         public double YieldWifi = 0.0;
