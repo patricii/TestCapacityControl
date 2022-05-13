@@ -1,5 +1,7 @@
 ﻿
 
+using MySql.Data.MySqlClient;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using TestCapacityControl.Exceptions;
@@ -15,7 +17,8 @@ namespace TestCapacityControl.Models
         public string Model { get; set; }
         public string Status { get; set; }
 
-        public ProductsTABLET() {
+        public ProductsTABLET()
+        {
 
         }
         public ProductsTABLET(int id, string productName, string model, string status)
@@ -77,48 +80,59 @@ namespace TestCapacityControl.Models
         {
             try
             {
-                YieldInline = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldInline;
-                YieldWifi = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldWifi;
-                YieldRFCal = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldRFCal;
-                YieldNSFT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldNSFT;
-                YieldRadCurr = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldRadCurr;
-                YieldTOF = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldTOF;
-                YieldANT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldANT;
-                YieldMMI1 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldMMI1;
-                YieldMMI2 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldMMI2;
-                YieldAUDIO = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldAudio;
-                YieldWriteNumber = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldWriteNumber;
-                YieldCFCUp = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldCFCUp;
-                YieldMMI3 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldMMI3;
+                using (MySqlConnection cnn = new MySqlConnection("server=localhost;userid=developer;password=326727;database=TestCapacityControlappdb"))
+                {
+                    cnn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM PRODUCTUPDATETABLET WHERE PRODUCTNAMEUP = @ProductName", cnn))
+                    {
+                        cmd.Parameters.AddWithValue("@ProductName", ProductName);
+                        var result = Convert.ToInt32(cmd.ExecuteScalar());
+                        if (result > 0)
+                        {
+                            YieldInline = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldInline;
+                            YieldWifi = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldWifi;
+                            YieldRFCal = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldRFCal;
+                            YieldNSFT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldNSFT;
+                            YieldRadCurr = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldRadCurr;
+                            YieldTOF = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldTOF;
+                            YieldANT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldANT;
+                            YieldMMI1 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldMMI1;
+                            YieldMMI2 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldMMI2;
+                            YieldAUDIO = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldAudio;
+                            YieldWriteNumber = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldWriteNumber;
+                            YieldCFCUp = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldCFCUp;
+                            YieldMMI3 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldMMI3;
 
-                NTFInline = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfInline;
-                NTFWifi = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfWifi;
-                NTFRFCal = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfRFCal;
-                NTFNSFT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfNSFT;
-                NTFRadCurr = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfRadCurr;
-                NTFTOF = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfTOF;
-                NTFANT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfANT;
-                NTFMMI1 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfMMI1;
-                NTFMMI2 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfMMI2;
-                NTFAUDIO = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfAudio;
-                NTFWriteNumber = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfWriteNumber;
-                NTFCFCUp = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfCFCUp;
-                NTFMMI3 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfMMI3;
+                            NTFInline = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfInline;
+                            NTFWifi = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfWifi;
+                            NTFRFCal = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfRFCal;
+                            NTFNSFT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfNSFT;
+                            NTFRadCurr = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfRadCurr;
+                            NTFTOF = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfTOF;
+                            NTFANT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfANT;
+                            NTFMMI1 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfMMI1;
+                            NTFMMI2 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfMMI2;
+                            NTFAUDIO = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfAudio;
+                            NTFWriteNumber = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfWriteNumber;
+                            NTFCFCUp = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfCFCUp;
+                            NTFMMI3 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfMMI3;
 
-                MTimeInline = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldInline;
-                MTimeWifi = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeWifi;
-                MTimeRFCal = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeRFCal;
-                MTimeNSFT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeNSFT;
-                MTimeRadCurr = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeRadCurr;
-                MTimeTOF = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeTOF;
-                MTimeANT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeANT;
-                MTimeMMI1 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeMMI1;
-                MTimeMMI2 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeMMI2;
-                MTimeAUDIO = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeAudio;
-                MTimeWriteNumber = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeWriteNumber;
-                MTimeCFCUp = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeCFCUp;
-                MTimeMMI3 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeMMI3;
-
+                            MTimeInline = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldInline;
+                            MTimeWifi = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeWifi;
+                            MTimeRFCal = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeRFCal;
+                            MTimeNSFT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeNSFT;
+                            MTimeRadCurr = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeRadCurr;
+                            MTimeTOF = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeTOF;
+                            MTimeANT = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeANT;
+                            MTimeMMI1 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeMMI1;
+                            MTimeMMI2 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeMMI2;
+                            MTimeAUDIO = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeAudio;
+                            MTimeWriteNumber = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeWriteNumber;
+                            MTimeCFCUp = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeCFCUp;
+                            MTimeMMI3 = _context.ProductUpdateTablet.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeMMI3;
+                        }
+                    }
+                }
             }
             catch
             {

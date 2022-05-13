@@ -1,4 +1,6 @@
 ﻿
+using MySql.Data.MySqlClient;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using TestCapacityControl.Exceptions;
@@ -14,7 +16,8 @@ namespace TestCapacityControl.Models
         public string Model { get; set; }
         public string Status { get; set; }
 
-        public Products() {
+        public Products()
+        {
 
         }
 
@@ -86,83 +89,94 @@ namespace TestCapacityControl.Models
         public double MTimePatsM2 = 0.0;
         public double MTimePatsSlim = 0.0;
 
-        private TestCapacityControlContext _context;          
+        private TestCapacityControlContext _context;
         public Products(TestCapacityControlContext context)
         {
             _context = context;
-            
+
         }
 
         public void runUpdate() //To Update the data from DB
         {
             try
             {
-                YieldInline = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldInline;
-                YieldBrdTest = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldBrdTest;
-                YieldBoardTst = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldBoardTst;
-                Yield5GFR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).Yield5GFR;
-                YieldDCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldDCAL;
-                YieldDVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldDVAL;
-                YieldCamCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldCamCAL;
-                YieldCamVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldCamVAL;
-                YieldJOT = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldJOT;
-                YieldL2Vision = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldL2Vision;
-                YieldL2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldL2AR;
-                YieldM2Cam = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldM2Cam;
-                YieldM2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldM2AR;
-                YieldJotSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldJotSlim;
-                YieldARSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldARSlim;
-                YieldCFC = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldCFC;
-                YieldPatsJot = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldPatsJot;
-                YieldPatsM2 = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldPatsM2;
-                YieldPatsSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldPatsSlim;
+                using (MySqlConnection cnn = new MySqlConnection("server=localhost;userid=developer;password=326727;database=TestCapacityControlappdb"))
+                {
+                    cnn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM PRODUCTUPDATECELULAR WHERE PRODUCTNAMEUP = @ProductName", cnn))
+                    {
+                        cmd.Parameters.AddWithValue("@ProductName", ProductName);
+                        var result = Convert.ToInt32(cmd.ExecuteScalar());
+                        if (result > 0)
+                        {
+                            YieldInline = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldInline;
+                            YieldBrdTest = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldBrdTest;
+                            YieldBoardTst = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldBoardTst;
+                            Yield5GFR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).Yield5GFR;
+                            YieldDCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldDCAL;
+                            YieldDVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldDVAL;
+                            YieldCamCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldCamCAL;
+                            YieldCamVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldCamVAL;
+                            YieldJOT = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldJOT;
+                            YieldL2Vision = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldL2Vision;
+                            YieldL2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldL2AR;
+                            YieldM2Cam = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldM2Cam;
+                            YieldM2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldM2AR;
+                            YieldJotSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldJotSlim;
+                            YieldARSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldARSlim;
+                            YieldCFC = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldCFC;
+                            YieldPatsJot = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldPatsJot;
+                            YieldPatsM2 = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldPatsM2;
+                            YieldPatsSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldPatsSlim;
 
-                NtfInline = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfInline;
-                NtfBrdTest = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfBrdTest;
-                NtfBoardTst = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfBoardTst;
-                Ntf5GFR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).Ntf5GFR;
-                NtfDCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfDCAL;
-                NtfDVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfDVAL;
-                NtfCamCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfCamCAL;
-                NtfCamVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfCamVAL;
-                NtfJOT = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfJOT;
-                NtfL2Vision = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfL2Vision;
-                NtfL2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfL2AR;
-                NtfM2Cam = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfM2Cam;
-                NtfM2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfM2AR;
-                NtfJotSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfJotSlim;
-                NtfARSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfARSlim;
-                NtfCFC = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfCFC;
-                NtfPatsJot = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfPatsJot;
-                NtfPatsM2 = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfPatsM2;
-                NtfPatsSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfPatsSlim;
+                            NtfInline = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfInline;
+                            NtfBrdTest = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfBrdTest;
+                            NtfBoardTst = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfBoardTst;
+                            Ntf5GFR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).Ntf5GFR;
+                            NtfDCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfDCAL;
+                            NtfDVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfDVAL;
+                            NtfCamCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfCamCAL;
+                            NtfCamVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfCamVAL;
+                            NtfJOT = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfJOT;
+                            NtfL2Vision = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfL2Vision;
+                            NtfL2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfL2AR;
+                            NtfM2Cam = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfM2Cam;
+                            NtfM2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfM2AR;
+                            NtfJotSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfJotSlim;
+                            NtfARSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfARSlim;
+                            NtfCFC = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfCFC;
+                            NtfPatsJot = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfPatsJot;
+                            NtfPatsM2 = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfPatsM2;
+                            NtfPatsSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).NtfPatsSlim;
 
-                MTimeInline = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeInline;
-                MTimeBrdTest = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeBrdTest;
-                MTimeBoardTst = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeBoardTst;
-                MTime5GFR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTime5GFR;
-                MTimeDCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeDCAL;
-                MTimeDVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeDVAL;
-                MTimeCamCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeCamCAL;
-                MTimeCamVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeCamVAL;
-                MTimeJOT = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeJOT;
-                MTimeL2Vision = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldInline;
-                MTimeL2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeL2AR;
-                MTimeM2Cam = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeM2Cam;
-                MTimeM2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeM2AR;
-                MTimeJotSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeJotSlim;
-                MTimeARSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeARSlim;
-                MTimeCFC = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeCFC;
-                MTimePatsJot = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimePatsJot;
-                MTimePatsM2 = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimePatsM2;
-                MTimePatsSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimePatsSlim;
+                            MTimeInline = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeInline;
+                            MTimeBrdTest = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeBrdTest;
+                            MTimeBoardTst = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeBoardTst;
+                            MTime5GFR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTime5GFR;
+                            MTimeDCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeDCAL;
+                            MTimeDVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeDVAL;
+                            MTimeCamCAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeCamCAL;
+                            MTimeCamVAL = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeCamVAL;
+                            MTimeJOT = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeJOT;
+                            MTimeL2Vision = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).YieldInline;
+                            MTimeL2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeL2AR;
+                            MTimeM2Cam = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeM2Cam;
+                            MTimeM2AR = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeM2AR;
+                            MTimeJotSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeJotSlim;
+                            MTimeARSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeARSlim;
+                            MTimeCFC = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimeCFC;
+                            MTimePatsJot = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimePatsJot;
+                            MTimePatsM2 = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimePatsM2;
+                            MTimePatsSlim = _context.ProductUpdateCelular.FirstOrDefault(x => x.ProductNameUp == ProductName).MTimePatsSlim;
+
+                        }
+                    }
+                }
             }
             catch
             {
                 throw new NotFoundException("Product Data Not Found!!!");
             }
-
         }
-        
     }
 }
