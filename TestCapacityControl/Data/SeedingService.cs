@@ -72,10 +72,11 @@ namespace TestCapacityControl.Data
             CMW500 c37 = new CMW500(new DateTime(2022, 3, 30), "JAG", "ME", "REPARO", 200418085, 2755, 141497, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
             CMW500 c38 = new CMW500(new DateTime(2021, 4, 10), "JAG", "ME", "ME07-PB01F1T07-BT004A", 200418076, 2756, 141498, "DUAL", 2, 2, 2, 2, 2, 0, 0, "BERLIN");
             CMW500 c39 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME16-PB91F1T16-BT003A", 200418087, 2757, 141499, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
+            CMW500 c40 = new CMW500(new DateTime(2021, 8, 19), "MAO", "ME", "NA", 200418084, 2723, 141500, "DUAL", 2, 2, 2, 0, 0, 2, 0, "Enviado para MAN - 20210824 - Projeto Caxangá");
+            CMW500 c41 = new CMW500(new DateTime(2021, 3, 31), "MAO", "ME", "NA", 200418077, 2759, 141501, "DUAL", 2, 2, 2, 0, 0, 2, 0, "Enviado para MAN - 20210824 - Projeto Caxangá");
+            CMW500 c42 = new CMW500(new DateTime(2020, 11, 12), "MAO", "ME", "ME15-PB91F1T15-BT002A", 200418065, 2760, 141502, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
 
-            CMW500 c40 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME15-PB91F1T15-BT001A", 200418066, 2723, 141465, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
-            CMW500 c41 = new CMW500(new DateTime(2021, 3, 3), "MAO", "ME", "ME04-PB91F1T04-BT002A", 200418067, 2594, 141461, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
-            CMW500 c42 = new CMW500(new DateTime(2021, 9, 2), "JAG", "ME", "ME08-PB01F1T08-BT005A", 200418022, 2596, 141462, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
+
             CMW500 c43 = new CMW500(new DateTime(2020, 9, 23), "MAO", "ME", "REPARO", 200418058, 2597, 141463, "DUAL", 2, 2, 2, 0, 0, 2, 0, "NA");
             CMW500 c44 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME15-PB91F1T15-BT003A", 200418055, 2722, 141464, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
             CMW500 c45 = new CMW500(new DateTime(2020, 12, 11), "MAO", "ME", "ME15-PB91F1T15-BT001A", 200418066, 2723, 141465, "DUAL", 2, 2, 2, 0, 0, 0, 0, "NA");
