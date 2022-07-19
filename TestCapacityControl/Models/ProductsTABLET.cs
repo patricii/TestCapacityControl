@@ -10,7 +10,8 @@ namespace TestCapacityControl.Models
 {
     public class ProductsTABLET
     {
-        public int Id { get; set; }
+        [Key]
+        public int productTablet_Id { get; set; }
 
         [Display(Name = "Product Name")]
         public string ProductName { get; set; }
@@ -23,7 +24,7 @@ namespace TestCapacityControl.Models
         }
         public ProductsTABLET(int id, string productName, string model, string status)
         {
-            Id = id;
+            productTablet_Id = id;
             ProductName = productName;
             Model = model;
             Status = status;

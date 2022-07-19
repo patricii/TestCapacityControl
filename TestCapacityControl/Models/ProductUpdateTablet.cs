@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,8 +8,8 @@ namespace TestCapacityControl.Models
 {
     public class ProductUpdateTablet
     {
-
-        public int Id { get; set; }
+        [Key]
+        public int pUT_Id { get; set; }
         public string ProductNameUp { get; set; }
         public double YieldInline { get; set; }
         public double YieldWifi { get; set; }

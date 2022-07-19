@@ -36,7 +36,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var departments = await _context.Departments
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.departments_Id == id);
             if (departments == null)
             {
                 return NotFound();
@@ -90,7 +90,7 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,JobTitle,Scope,Email")] Departments departments)
         {
-            if (id != departments.Id)
+            if (id != departments.departments_Id)
             {
                 return NotFound();
             }
@@ -104,7 +104,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DepartmentsExists(departments.Id))
+                    if (!DepartmentsExists(departments.departments_Id))
                     {
                         return NotFound();
                     }
@@ -127,7 +127,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var departments = await _context.Departments
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.departments_Id == id);
             if (departments == null)
             {
                 return NotFound();
@@ -149,7 +149,7 @@ namespace TestCapacityControl.Controllers
 
         private bool DepartmentsExists(int id)
         {
-            return _context.Departments.Any(e => e.Id == id);
+            return _context.Departments.Any(e => e.departments_Id == id);
         }
     }
 }

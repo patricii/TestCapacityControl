@@ -8,7 +8,8 @@ namespace TestCapacityControl.Models
 {
     public class TestProcess
     {
-        public int Id { get; set; }
+        [Key]
+        public int testProcess_Id { get; set; }
         public string Technology { get; set; }
 
         [Display(Name = "L2")]

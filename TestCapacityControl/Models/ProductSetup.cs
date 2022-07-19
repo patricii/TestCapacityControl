@@ -5,7 +5,8 @@ namespace TestCapacityControl.Models
 {
     public class ProductSetup
     {
-        public int Id { get; set; }
+        [Key]
+        public int productSetup_Id { get; set; }
 
         [Display(Name = "Product Name")]
         public string Product { get; set; }

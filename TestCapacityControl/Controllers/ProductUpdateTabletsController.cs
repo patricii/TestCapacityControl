@@ -33,7 +33,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var productUpdateTablet = await _context.ProductUpdateTablet
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.pUT_Id == id);
             if (productUpdateTablet == null)
             {
                 return NotFound();
@@ -87,7 +87,7 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ProductNameUp,YieldInline,YieldWifi,YieldRFCal,YieldNSFT,YieldRadCurr,YieldTOF,YieldANT,YieldMMI1,YieldMMI2,YieldAudio,YieldWriteNumber,YieldCFCUp,YieldMMI3,NtfInline,NtfWifi,NtfRFCal,NtfNSFT,NtfRadCurr,NtfTOF,NtfANT,NtfMMI1,NtfMMI2,NtfAudio,NtfWriteNumber,NtfCFCUp,NtfMMI3,MTimeInline,MTimeWifi,MTimeRFCal,MTimeNSFT,MTimeRadCurr,MTimeTOF,MTimeANT,MTimeMMI1,MTimeMMI2,MTimeAudio,MTimeWriteNumber,MTimeCFCUp,MTimeMMI3")] ProductUpdateTablet productUpdateTablet)
         {
-            if (id != productUpdateTablet.Id)
+            if (id != productUpdateTablet.pUT_Id)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductUpdateTabletExists(productUpdateTablet.Id))
+                    if (!ProductUpdateTabletExists(productUpdateTablet.pUT_Id))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var productUpdateTablet = await _context.ProductUpdateTablet
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.pUT_Id == id);
             if (productUpdateTablet == null)
             {
                 return NotFound();
@@ -146,7 +146,7 @@ namespace TestCapacityControl.Controllers
 
         private bool ProductUpdateTabletExists(int id)
         {
-            return _context.ProductUpdateTablet.Any(e => e.Id == id);
+            return _context.ProductUpdateTablet.Any(e => e.pUT_Id == id);
         }
     }
 }

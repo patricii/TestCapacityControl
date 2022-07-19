@@ -39,7 +39,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var products = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.products_Id == id);
             if (products == null)
             {
                 return NotFound();
@@ -93,7 +93,7 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ProductName,Model,Status")] Products products)
         {
-            if (id != products.Id)
+            if (id != products.products_Id)
             {
                 return NotFound();
             }
@@ -107,7 +107,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductsExists(products.Id))
+                    if (!ProductsExists(products.products_Id))
                     {
                         return NotFound();
                     }
@@ -130,7 +130,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var products = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.products_Id == id);
             if (products == null)
             {
                 return NotFound();
@@ -152,7 +152,7 @@ namespace TestCapacityControl.Controllers
 
         private bool ProductsExists(int id)
         {
-            return _context.Products.Any(e => e.Id == id);
+            return _context.Products.Any(e => e.products_Id == id);
         }
     }
 }

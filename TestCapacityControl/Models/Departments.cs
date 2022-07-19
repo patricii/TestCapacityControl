@@ -8,7 +8,8 @@ namespace TestCapacityControl.Models
 {
     public class Departments
     {
-        public int Id { get; set; }
+        [Key]
+        public int departments_Id { get; set; }
 
         [Required]
         public string Name { get; set; }

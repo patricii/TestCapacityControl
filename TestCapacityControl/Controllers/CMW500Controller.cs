@@ -40,7 +40,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var cMW500 = await _context.CMW500
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.CMW_Id == id);
             if (cMW500 == null)
             {
                 return NotFound();
@@ -94,7 +94,7 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Updated,Site,Group,Last_Station,Id_Motorola,Id_Flex,SerialNumber,Type,KM550_LTE_TDD,KM011_QC_CAL,KV113_MTK_CAL,KM800_CDMA,KB036_6GHz,KV120_Unisoc,WiFi_KM650_KM610,Comments")] CMW500 cMW500)
         {
-            if (id != cMW500.Id)
+            if (id != cMW500.CMW_Id)
             {
                 return NotFound();
             }
@@ -108,7 +108,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CMW500Exists(cMW500.Id))
+                    if (!CMW500Exists(cMW500.CMW_Id))
                     {
                         return NotFound();
                     }
@@ -131,7 +131,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var cMW500 = await _context.CMW500
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.CMW_Id == id);
             if (cMW500 == null)
             {
                 return NotFound();
@@ -153,7 +153,7 @@ namespace TestCapacityControl.Controllers
 
         private bool CMW500Exists(int id)
         {
-            return _context.CMW500.Any(e => e.Id == id);
+            return _context.CMW500.Any(e => e.CMW_Id == id);
         }
     }
 }

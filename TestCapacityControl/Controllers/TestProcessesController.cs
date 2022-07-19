@@ -33,7 +33,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var testProcess = await _context.TestProcess
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.testProcess_Id == id);
             if (testProcess == null)
             {
                 return NotFound();
@@ -87,7 +87,7 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Technology,L2,M2,JOT_Slim,JOT,WUHAN_L2,WUHAN_JOT_Slim,WUHAN_JOT")] TestProcess testProcess)
         {
-            if (id != testProcess.Id)
+            if (id != testProcess.testProcess_Id)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TestProcessExists(testProcess.Id))
+                    if (!TestProcessExists(testProcess.testProcess_Id))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var testProcess = await _context.TestProcess
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.testProcess_Id == id);
             if (testProcess == null)
             {
                 return NotFound();
@@ -146,7 +146,7 @@ namespace TestCapacityControl.Controllers
 
         private bool TestProcessExists(int id)
         {
-            return _context.TestProcess.Any(e => e.Id == id);
+            return _context.TestProcess.Any(e => e.testProcess_Id == id);
         }
     }
 }

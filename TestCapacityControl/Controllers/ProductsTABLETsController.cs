@@ -39,7 +39,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var productsTABLET = await _context.ProductsTABLET
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.productTablet_Id == id);
             if (productsTABLET == null)
             {
                 return NotFound();
@@ -93,7 +93,7 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ProductName,Model,Status")] ProductsTABLET productsTABLET)
         {
-            if (id != productsTABLET.Id)
+            if (id != productsTABLET.productTablet_Id)
             {
                 return NotFound();
             }
@@ -107,7 +107,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductsTABLETExists(productsTABLET.Id))
+                    if (!ProductsTABLETExists(productsTABLET.productTablet_Id))
                     {
                         return NotFound();
                     }
@@ -130,7 +130,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var productsTABLET = await _context.ProductsTABLET
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.productTablet_Id == id);
             if (productsTABLET == null)
             {
                 return NotFound();
@@ -152,7 +152,7 @@ namespace TestCapacityControl.Controllers
 
         private bool ProductsTABLETExists(int id)
         {
-            return _context.ProductsTABLET.Any(e => e.Id == id);
+            return _context.ProductsTABLET.Any(e => e.productTablet_Id == id);
         }
     }
 }

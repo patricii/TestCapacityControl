@@ -39,7 +39,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var productSetup = await _context.ProductSetup
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.productSetup_Id == id);
             if (productSetup == null)
             {
                 return NotFound();
@@ -93,7 +93,7 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Product,TestSets,PowerSupply,License,PSAUX,TDD,Freq6Ghz")] ProductSetup productSetup)
         {
-            if (id != productSetup.Id)
+            if (id != productSetup.productSetup_Id)
             {
                 return NotFound();
             }
@@ -107,7 +107,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductSetupExists(productSetup.Id))
+                    if (!ProductSetupExists(productSetup.productSetup_Id))
                     {
                         return NotFound();
                     }
@@ -130,7 +130,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var productSetup = await _context.ProductSetup
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.productSetup_Id == id);
             if (productSetup == null)
             {
                 return NotFound();
@@ -152,7 +152,7 @@ namespace TestCapacityControl.Controllers
 
         private bool ProductSetupExists(int id)
         {
-            return _context.ProductSetup.Any(e => e.Id == id);
+            return _context.ProductSetup.Any(e => e.productSetup_Id == id);
         }
     }
 }

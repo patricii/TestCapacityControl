@@ -9,8 +9,8 @@ using TestCapacityControl.Models;
 namespace TestCapacityControl.Migrations
 {
     [DbContext(typeof(TestCapacityControlContext))]
-    [Migration("20220504141359_ProductUpgradeTablet")]
-    partial class ProductUpgradeTablet
+    [Migration("20220719134621_Fisrt Migration")]
+    partial class FisrtMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace TestCapacityControl.Migrations
 
             modelBuilder.Entity("TestCapacityControl.Models.CMW500", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CMW_Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Comments");
@@ -56,14 +56,14 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<int>("WiFi_KM650_KM610");
 
-                    b.HasKey("Id");
+                    b.HasKey("CMW_Id");
 
                     b.ToTable("CMW500");
                 });
 
             modelBuilder.Entity("TestCapacityControl.Models.Departments", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("departments_Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Email");
@@ -75,14 +75,14 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<string>("Scope");
 
-                    b.HasKey("Id");
+                    b.HasKey("departments_Id");
 
                     b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("TestCapacityControl.Models.Products", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("products_Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Model");
@@ -91,14 +91,14 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<string>("Status");
 
-                    b.HasKey("Id");
+                    b.HasKey("products_Id");
 
                     b.ToTable("Products");
                 });
 
             modelBuilder.Entity("TestCapacityControl.Models.ProductSetup", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("productSetup_Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Freq6Ghz");
@@ -115,14 +115,14 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<string>("TestSets");
 
-                    b.HasKey("Id");
+                    b.HasKey("productSetup_Id");
 
                     b.ToTable("ProductSetup");
                 });
 
             modelBuilder.Entity("TestCapacityControl.Models.ProductsTABLET", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("productTablet_Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Model");
@@ -131,14 +131,14 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<string>("Status");
 
-                    b.HasKey("Id");
+                    b.HasKey("productTablet_Id");
 
                     b.ToTable("ProductsTABLET");
                 });
 
             modelBuilder.Entity("TestCapacityControl.Models.ProductUpdateCelular", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("pUC_Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<double>("MTime5GFR");
@@ -257,14 +257,14 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<double>("YieldPatsSlim");
 
-                    b.HasKey("Id");
+                    b.HasKey("pUC_Id");
 
                     b.ToTable("ProductUpdateCelular");
                 });
 
             modelBuilder.Entity("TestCapacityControl.Models.ProductUpdateTablet", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("pUT_Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<double>("MTimeANT");
@@ -347,14 +347,14 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<double>("YieldWriteNumber");
 
-                    b.HasKey("Id");
+                    b.HasKey("pUT_Id");
 
                     b.ToTable("ProductUpdateTablet");
                 });
 
             modelBuilder.Entity("TestCapacityControl.Models.TestProcess", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("testProcess_Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("JOT");
@@ -373,7 +373,7 @@ namespace TestCapacityControl.Migrations
 
                     b.Property<string>("WUHAN_L2");
 
-                    b.HasKey("Id");
+                    b.HasKey("testProcess_Id");
 
                     b.ToTable("TestProcess");
                 });

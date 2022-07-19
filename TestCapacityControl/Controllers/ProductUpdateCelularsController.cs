@@ -33,7 +33,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var productUpdateCelular = await _context.ProductUpdateCelular
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.pUC_Id == id);
             if (productUpdateCelular == null)
             {
                 return NotFound();
@@ -87,7 +87,7 @@ namespace TestCapacityControl.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ProductNameUp,YieldInline,YieldBrdTest,YieldBoardTst,Yield5GFR,YieldDCAL,YieldDVAL,YieldCamCAL,YieldCamVAL,YieldJOT,YieldL2Vision,YieldL2AR,YieldM2Cam,YieldM2AR,YieldJotSlim,YieldARSlim,YieldCFC,YieldPatsJot,YieldPatsM2,YieldPatsSlim,NtfInline,NtfBrdTest,NtfBoardTst,Ntf5GFR,NtfDCAL,NtfDVAL,NtfCamCAL,NtfCamVAL,NtfJOT,NtfL2Vision,NtfL2AR,NtfM2Cam,NtfM2AR,NtfJotSlim,NtfARSlim,NtfCFC,NtfPatsJot,NtfPatsM2,NtfPatsSlim,MTimeInline,MTimeBrdTest,MTimeBoardTst,MTime5GFR,MTimeDCAL,MTimeDVAL,MTimeCamCAL,MTimeCamVAL,MTimeJOT,MTimeL2Vision,MTimeL2AR,MTimeM2Cam,MTimeM2AR,MTimeJotSlim,MTimeARSlim,MTimeCFC,MTimePatsJot,MTimePatsM2,MTimePatsSlim")] ProductUpdateCelular productUpdateCelular)
         {
-            if (id != productUpdateCelular.Id)
+            if (id != productUpdateCelular.pUC_Id)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace TestCapacityControl.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductUpdateCelularExists(productUpdateCelular.Id))
+                    if (!ProductUpdateCelularExists(productUpdateCelular.pUC_Id))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace TestCapacityControl.Controllers
             }
 
             var productUpdateCelular = await _context.ProductUpdateCelular
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.pUC_Id == id);
             if (productUpdateCelular == null)
             {
                 return NotFound();
@@ -146,7 +146,7 @@ namespace TestCapacityControl.Controllers
 
         private bool ProductUpdateCelularExists(int id)
         {
-            return _context.ProductUpdateCelular.Any(e => e.Id == id);
+            return _context.ProductUpdateCelular.Any(e => e.pUC_Id == id);
         }
     }
 }
